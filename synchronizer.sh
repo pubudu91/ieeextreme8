@@ -1,4 +1,4 @@
-git pull origin/master
+git pull origin
 while true
 do
 	for i in `seq 1 10`
@@ -8,7 +8,7 @@ do
 		echo "committed"
 		sleep 60
 	done
-	git pull origin
-	git push origin
+	git pull --all origin
+	git push --all origin
 	echo "exchanged, perhaps you better check for conficts?"
 done
