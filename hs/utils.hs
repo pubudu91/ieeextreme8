@@ -1,5 +1,5 @@
 next :: [Int] -> [Int]
-next = filter (>=0) . map (\x -> x-2)
+next = filter (>0) . map (\x -> x-1)
 
 solve :: [Int] -> [Int]
 solve = map length . evolution next []
