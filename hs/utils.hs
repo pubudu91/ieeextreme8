@@ -8,7 +8,7 @@ evolution :: (Eq a) => (a -> a) -> a -> a -> [a]
 evolution f end x | x == end = []
                   | otherwise = x : (evolution f end (f x))
 
-main = do
-    l <- getLine
-    lb <- getLine :: IO String
-    mapM_ print (solve . map (read) . words lb)
+--main = do
+--    l <- getLine
+--    lb <- getLine :: IO String
+--    mapM_ print (solve (map (read) (words lb)))
