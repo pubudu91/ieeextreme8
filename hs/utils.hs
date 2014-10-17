@@ -1,5 +1,5 @@
 next :: [Int] -> [Int]
-next a = filter (>0) . map (\x -> subtract x l) a
+next a = filter (>0) (map (\x -> subtract x l) a)
     where l = minimum a
 
 solve = map length . evolution next []
