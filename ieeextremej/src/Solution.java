@@ -11,6 +11,10 @@ public class Solution {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        new Solution().run();
+    }
+
+    private void run() {
         Scanner sc = new Scanner(System.in);
     }
 
