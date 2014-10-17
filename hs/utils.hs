@@ -11,4 +11,4 @@ evolution f end x | x == end = []
 main = do
     l <- getLine
     lb <- getLine :: IO String
-    print lb
+    mapM_ print [1,2,3]
