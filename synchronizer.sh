@@ -3,12 +3,12 @@ while true
 do
 	for i in `seq 1 10`
 	do
+		sleep 60
 		git add .
 		git commit -am "... and another commit ..."
 		echo "committed"
-		sleep 60
 	done
-	git pull --all origin
-	git push --all origin
+	git pull --all
+	git push --all
 	echo "exchanged, perhaps you better check for conficts?"
 done
