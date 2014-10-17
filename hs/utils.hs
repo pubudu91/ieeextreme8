@@ -1,7 +1,7 @@
 next :: [Int] -> [Int]
-next = filter (>0) . map (\x -> x-1)
+next a = filter (>0) . map (\x -> x-l) a
+    where l = minimum a
 
-solve :: [Int] -> [Int]
 solve = map length . evolution next []
 
 evolution :: (Eq a) => (a -> a) -> a -> a -> [a]
