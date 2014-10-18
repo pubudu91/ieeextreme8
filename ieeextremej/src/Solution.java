@@ -42,6 +42,13 @@ public class Solution {
                 }
             }
         }
+        System.out.println(err1.size()+err2.size());
+        for(Integer e : err1) {
+            System.out.println("i_1="+(e+0x01));
+        }
+        for(Integer e : err1) {
+            System.out.println("i_1="+(e+0x01));
+        }
     }
 
 }
