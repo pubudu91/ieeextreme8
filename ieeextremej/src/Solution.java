@@ -14,7 +14,8 @@ public class Solution {
         public int cost;
         
         public FS (int dist, int cost) {
-            
+            this.dist = dist;
+            this.cost = cost;
         }
         
     }
@@ -27,7 +28,14 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
         for(; test > 0; test--) {
+            int nGas = sc.nextInt();
+            int full = sc.nextInt();
+            int start = sc.nextInt();
+            int length = sc.nextInt();
             
+            for(int i = 0; i < nGas; i++) {
+                
+            }
         }
     }
 
