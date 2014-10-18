@@ -30,10 +30,14 @@ public class Solution {
         public int totalV () {
             return this.take*this.value;
         }
+        
+        public double load () {
+            return (double) this.value/this.weight;
+        }
 
         @Override
         public String toString() {
-            return String.format("%s,%s,%s,%s",this.name,this.take,this.take*this.weight,this.take*this.value);
+            return String.format("%s,%s,%s,%s,%s",this.name,this.take,this.take*this.weight,this.take*this.value,this.load());
         }
         
     }
