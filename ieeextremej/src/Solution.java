@@ -24,7 +24,7 @@ public class Solution {
         
     }
     
-    private static void PrintState () {
+    private static void PrintState (int state) {
         
     }
 
