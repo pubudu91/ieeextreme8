@@ -54,9 +54,10 @@ public class Solution {
             return 0x00;
         } else {
             FS fsc = cheapest(from,to);
+            int idx = this.index;
             need = Math.min(fsf.d-fsc.d,this.full);
             int c = need*fsc.c;
-            solve(f0,from,);
+            solve(f0,from,index);
         }
     }
 
@@ -65,13 +66,16 @@ public class Solution {
         FS min = null;
         FS[] fss = this.fss;
         FS fi;
+        int mini = -1;
         for (int i = from; i < to; i++) {
             fi = fss[i];
             if (fi.c < c) {
                 c = fi.c;
                 min = fi;
+                mini = i;
             }
         }
+        this.index = mini;
         return min;
     }
 
