@@ -16,13 +16,17 @@ public class Solution {
     private boolean[] visi;
     private PriorityQueue<Traveler> pq = new PriorityQueue<>();
 
-    private void query(int pi, long da, int pj) {
+    private void query(int pi, long da, int target) {
         pq.clear();
         this.visi = new boolean[names.size()];
         expand(pi, da);
         while(pq.size() > 0x00) {
-            
+            Traveler t = pq.remove();
+            if(t.pj == target) {
+                return;
+            }
         }
+        
     }
 
     private void expand(int pi, long da) {
