@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 
 /**
@@ -29,9 +30,10 @@ public class Solution {
         int tot = r*k;
         sc.nextLine();
         ArrayList<Item> itms = new ArrayList<>();
+        Pattern p = Pattern.compile("\\w+");
         Item itm;
         while(sc.hasNextLine()) {
-            String nm = sc.next("\\w+");
+            String nm = sc.next(p);
             if(nm.equals("END")) {
                 break;
             } else {
