@@ -129,23 +129,38 @@ public class Solution {
         Adres {
 
             @Override
-            int fetchMem(int value, State state) {
+            public int fetchMem(int value, State state) {
                 return state.memory[value];
+            }
+
+            @Override
+            public int fetchAdress(int value, State state) {
+                return value;
             }
             
         },
         Constant {
 
             @Override
-            int fetchMem(int value, State state) {
+            public int fetchMem(int value, State state) {
                 return value;
+            }
+
+            @Override
+            public int fetchAdress(int value, State state) {
+                return -0x01;
             }
         },
         Reference {
 
             @Override
-            int fetchMem(int value, State state) {
+            public int fetchMem(int value, State state) {
                 return state.memory[state.memory[value]];
+            }
+
+            @Override
+            public int fetchAdress(int value, State state) {
+                return state.memory[value];
             }
         };
         
