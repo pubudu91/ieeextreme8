@@ -130,7 +130,7 @@ public class Solution {
 
             @Override
             int fetchMem(int value, State state) {
-                return state.
+                return state.memory[value];
             }
             
         },
@@ -138,18 +138,20 @@ public class Solution {
 
             @Override
             int fetchMem(int value, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                return value;
             }
         },
         Reference {
 
             @Override
             int fetchMem(int value, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                return state.memory[state.memory[value]];
             }
         };
         
-        private abstract int fetchMem (int value, State state);
+        public abstract int fetchMem (int value, State state);
+        
+        public abstract int fetchAdress (int value, State state);
     }
 
     private class State {
