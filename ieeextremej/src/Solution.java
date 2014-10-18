@@ -46,8 +46,8 @@ public class Solution {
                     TreeSet<Flight> flij = fli[pj];
                     Flight flu = flij.ceiling(flt);
                     if (flu != null) {
-                        System.out.print("schedule to " + pj + " at ");
-                        printDate(flu.from);
+                        //System.out.print("schedule to " + pj + " at ");
+                        //printDate(flu.from);
                         pq.add(new Traveler(pj, flu.to + 60));
                     }
                 }
@@ -157,11 +157,11 @@ public class Solution {
             int pi = hm.get(sc.next());
             long da = sc.nextInt();
             da *= 1440;
-            da |= sc.nextInt();
+            da += sc.nextInt();
             int pj = hm.get(sc.next());
             long db = sc.nextInt();
             db *= 1440;
-            db |= sc.nextInt();
+            db += sc.nextInt();
             Flight fli = new Flight(da, db);
             fls[pi][pj].add(fli);
         }
@@ -170,7 +170,7 @@ public class Solution {
             int pi = hm.get(sc.next());
             long da = sc.nextInt();
             da *= 1440;
-            da |= sc.nextInt();
+            da += sc.nextInt();
             int pj = hm.get(sc.next());
             query(pi, da, pj);
         }
