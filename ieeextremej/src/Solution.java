@@ -1,4 +1,7 @@
 
+import java.util.Scanner;
+
+
 /**
  *
  * @author kommusoft
@@ -21,7 +24,11 @@ public class Solution {
     }
 
     private void run() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scanner sc = new Scanner(System.in);
+        int test = sc.nextInt();
+        for(; test > 0; test--) {
+            
+        }
     }
 
 }
