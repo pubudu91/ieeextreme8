@@ -16,12 +16,12 @@ public class Solution {
     }
 
     private void run() {
-        Scanner sc = new Scanner(System.in);
+        /*Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
         int m = sc.nextInt();
         int n = sc.nextInt();
-        long s = sc.nextLong();
-        printState(s,n);
+        long s = sc.nextLong();*/
+        printState(16,8);
         
     }
     
