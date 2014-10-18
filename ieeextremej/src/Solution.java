@@ -68,9 +68,7 @@ public class Solution {
         
         while (sc.hasNextLine()) {
             String nm = sc.next(p);
-            System.out.println("\""+nm+"\"");
             if (nm.toLowerCase().equals("end")) {
-                System.out.println("ENDED NWO");
                 break;
             } else {
                 itm = new Item();
@@ -78,10 +76,8 @@ public class Solution {
                 itm.weight = sc.nextInt();
                 itm.value = sc.nextInt();
                 itms.add(itm);
-                System.out.println("ADDED");
             }
         }
-        System.out.println("STARt");
         Collections.sort(itms);
         int rem = tot;
         for(Item itmi : itms) {
