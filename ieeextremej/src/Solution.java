@@ -33,7 +33,7 @@ public class Solution {
                 Matcher m = parser0.matcher(line);
                 System.out.println(m.find());
                 il = m.group(1);
-                if (!il.equals("")) {
+                if (il != null) {
                     state.labels.put(il, counter);
                 }
                 Instruction ins = new Instruction();
@@ -115,7 +115,7 @@ public class Solution {
     }
 
     public static void printHex(byte val) {
-        System.out.print(String.format("0x%2s", Integer.toHexString(val)).replace(' ', '0'));
+        System.out.print(String.format("%2s", Integer.toHexString(val)).replace(' ', '0'));
     }
 
     public enum Opcode {
@@ -301,7 +301,7 @@ public class Solution {
     private class State {
 
         public ArrayList<Instruction> instructions = new ArrayList<>();
-        public byte[] memory;
+        public byte[] memory = new byte[0x0f];
         public int pc = 0;
         public int cmp;
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
