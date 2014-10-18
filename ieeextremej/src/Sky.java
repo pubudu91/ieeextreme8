@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  *
  * @author kommusoft
  */
-public class Solution {
+public class Sky {
 
     private HashMap<String, Integer> names;
     private TreeSet<Flight>[][] fls;
@@ -130,7 +130,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        new Solution().run();
+        new Sky().run();
     }
 
     private void run() {
