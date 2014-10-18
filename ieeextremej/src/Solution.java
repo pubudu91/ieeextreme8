@@ -24,7 +24,6 @@ public class Solution {
             Traveler t = pq.remove();
             if (t.pj == target) {
                 printDate(t.da - 60);
-
                 return;
             } else {
                 expand(t.pj, t.da);
@@ -172,7 +171,7 @@ public class Solution {
                     if (fli.dominates(alt)) {
                         tij.remove(alt);
                         rem = true;
-                    } else if(alt.dominates(fli)) {
+                    } else if (alt.dominates(fli)) {
                         fli = null;
                     }
                 }
