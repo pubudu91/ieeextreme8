@@ -112,7 +112,7 @@ public class Solution {
     }
 
     public static void printHex(byte val) {
-        System.out.print(String.format("%02X",val).replace(' ', '0'));
+        System.out.print(String.format("%02X",val).toUpperCase());
     }
 
     public enum Opcode {
