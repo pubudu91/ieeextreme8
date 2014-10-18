@@ -1,4 +1,7 @@
 
+import java.util.Scanner;
+
+
 /**
  *
  * @author kommusoft
@@ -10,7 +13,7 @@ public class Solution {
     }
 
     private void run() {
-        Scanner sc = new Scanner();
+        Scanner sc = new Scanner(System.in);
         
     }
 
