@@ -82,9 +82,11 @@ public class Solution {
         int nim = 0x01 << itms.size();
         for (int i = 0x00; i < nim; i++) {
             int rem = tot;
+            int vl = 0x00;
             for (Item itmi : itms) {
                 int wgh = itmi.weight;
                 int take = rem / wgh;
+                vl += take*itmi.weight;
                 itmi.take = take;
                 rem -= wgh * take;
             }
