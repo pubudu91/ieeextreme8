@@ -2,7 +2,7 @@ import Debug.Trace
 import Data.List
 
 --ferats :: [Int]
-ferats a = [b|b<-[1..(a-1)],let cc = a*a-b*b, c > 0, let c = floor ( sqrt ( fromIntegral cc)), b*b<=cc,cc == c*c]
+ferats a = [b|b<-[1..(a-1)],let cc = a*a-b*b, cc > 0, let c = floor ( sqrt ( fromIntegral cc)), b*b<=cc,cc == c*c]
 
 vferats :: Int -> Int -> Bool
 vferats a b = cc == c*c
@@ -12,7 +12,7 @@ vferats a b = cc == c*c
 solve'' :: Int -> Int -> Bool
 solve'' a b | a < b = solve'' b a
 solve'' a b | otherwise = a == fb && (any (vferats fb) (ferats a))
-    where f = (div a b)
+    where f = a/b
           fb = f*b
 
 solve :: [String] -> String
