@@ -89,6 +89,7 @@ public class Solution {
 
     public Argument decodeArgument(String ia) {
         Argument arg = new Argument();
+        arg.label = ia;
         if (ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
             arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01));
