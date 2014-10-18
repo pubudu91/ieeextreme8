@@ -34,12 +34,15 @@ public class Solution {
 
         while (sc.hasNextLine()) {
             String nm = sc.next(p);
+            System.out.println(nm);
             if (nm.equals("END")) {
                 break;
             } else {
                 itm = new Item();
                 itm.name = nm;
+                sc.next();
                 itm.weight = sc.nextInt();
+                sc.next();
                 itm.value = sc.nextInt();
                 itms.add(itm);
             }
