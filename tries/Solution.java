@@ -14,6 +14,15 @@ public class Solution {
             
             long bytesPerNode = 4 * A;
 
+<<<<<<< HEAD
+			double exponent = Math.floor(Math.log((double)N) / Math.log((double)A)); // TODO: + epsilon before floor?
+			System.out.println("exponent "+exponent);
+            long expandingDepth = (long)(0.5 + exponent); // depth of purely exponentially expanding part, including the root node
+			System.out.println("expandingDepth "+expandingDepth);
+            if (expandingDepth >= L) {
+                long numNodes = (long) + (0.5 + (Math.pow((double)A, (double)L) - 1) / (double)(A - 1));
+				System.out.println("numNodes "+numNodes);
+=======
 			if (A == 1) {
 				System.out.println(bytesPerNode * N);
 				continue;
@@ -42,10 +51,18 @@ public class Solution {
             if (expandingDepth >= L) {
                 long numNodes = (long) + (0.5 + (Math.pow((double)A, (double)L+1) - 1) / (double)(A - 1));
 				//System.out.println("numNodes "+numNodes);
+>>>>>>> 6fb56309b6da4139b490c56710ee7b38d7c71dd2
                 System.out.println(numNodes * bytesPerNode);
                 continue;
             }
 			long numExpanding = (long) (0.5 + (Math.pow((double)A, exponent+1) - 1) / (double)(A - 1));
+<<<<<<< HEAD
+			System.out.println("numExpanding "+numExpanding);
+            long numFixedWidth = (long) (L - expandingDepth) * N;
+			System.out.println("numFixedWidth "+numFixedWidth);
+
+			System.out.println((numExpanding + numFixedWidth) * bytesPerNode);
+=======
 			//System.out.println("numExpanding "+numExpanding);
             long fixedWidthDepth;
 
@@ -57,6 +74,7 @@ public class Solution {
 
 			System.out.println((numExpanding + numFixedWidth) * bytesPerNode);
 			*/
+>>>>>>> 6fb56309b6da4139b490c56710ee7b38d7c71dd2
 		}
 	}
 }
