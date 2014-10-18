@@ -1,14 +1,12 @@
 import Data.Tree
 
-data State = Empty | Some (AVL Int,Int,AVL Int)
+type State = (AVL Int,Int,AVL Int)
 
 solve :: [Int] -> [Int] -> Int
 solve [_,m,k] as = solve' k l (drop k l)
     where l = (as++take (k-1) as)
 
-insert State -> Int -> State
-insert Empty k = Some (empty,k,empty)
-insert 
+initialize :: Int -> [Int] -> State
 
 
 main = do
