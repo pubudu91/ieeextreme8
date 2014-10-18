@@ -23,7 +23,7 @@ public class Solution {
         String line;
         String il;
         String io;
-        String ia;
+        String[] ia;
         Pattern parser0 = Pattern.compile("^(\\w+)? *(\\w+) +(\\w+)$");
         State state = new State();
         int counter = 0;
@@ -37,7 +37,10 @@ public class Solution {
             }
             Instruction ins = new Instruction();
             io = m.group(2).toLowerCase();
-            ia = m.group(3);
+            ia = m.group(3).split(",");
+            for(String iai : ia) {
+                
+            }
             counter++;
         }
     }
