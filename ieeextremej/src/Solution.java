@@ -24,7 +24,7 @@ public class Solution {
         String il;
         String io;
         String[] ia;
-        Pattern parser0 = Pattern.compile("^(\\w+)? *(\\w+) +(.+)$");
+        Pattern parser0 = Pattern.compile("^(\\w+ )?(\\w+) +(.+)$");
         State state = new State();
         int counter = 0;
         while (sc.hasNextLine()) {
@@ -98,7 +98,7 @@ public class Solution {
 
     public Argument decodeArgument(String ia) {
         Argument arg = new Argument();
-        arg.label = ia;
+        arg.label = ia.trim();
         if (ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
             arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01), 16);
