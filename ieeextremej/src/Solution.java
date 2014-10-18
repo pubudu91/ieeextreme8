@@ -168,6 +168,10 @@ public class Solution {
             do {
                 rem = false;
                 Flight alt = tij.floor(fli);
+                if(fli.dominates(alt)) {
+                    tij.remove(alt);
+                    rem = true;
+                }
             } while(rem);
             fls[pi][pj].add(fli);
         }
