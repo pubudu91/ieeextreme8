@@ -39,7 +39,8 @@ public class Solution {
             long bi = s>>>m;
             bi &= 0x07;
             long b = (r>>bi)&0x01;
-            res |= b <<(m+0x01);
+            b <<= m+0x01;
+            res |= b;
             //System.out.println(Long.toBinaryString(((r>>((s>>>m)&0x07))&0x01)));
         }
         res |= ((r>>>((s<<0x01)&0x07))&0x01);
