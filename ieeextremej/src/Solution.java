@@ -243,7 +243,7 @@ public class Solution {
             state.memory[meth.fetchAdress(this.addr, state)] = val;
         }
 
-        private byte load(State state) {
+        private int load(State state) {
             return meth.fetchMem(this.addr, state);
         }
 
@@ -254,7 +254,7 @@ public class Solution {
         Adres {
 
                     @Override
-                    public byte fetchMem(byte value, State state) {
+                    public int fetchMem(byte value, State state) {
                         return state.memory[value];
                     }
 
@@ -267,7 +267,7 @@ public class Solution {
         Constant {
 
                     @Override
-                    public byte fetchMem(byte value, State state) {
+                    public int fetchMem(byte value, State state) {
                         return value;
                     }
 
@@ -279,7 +279,7 @@ public class Solution {
         Reference {
 
                     @Override
-                    public byte fetchMem(byte value, State state) {
+                    public int fetchMem(byte value, State state) {
                         return state.memory[state.memory[value]];
                     }
 
@@ -289,7 +289,7 @@ public class Solution {
                     }
                 };
 
-        public abstract byte fetchMem(byte value, State state);
+        public abstract int fetchMem(byte value, State state);
 
         public abstract int fetchAdress(byte value, State state);
     }
@@ -297,7 +297,7 @@ public class Solution {
     private class State {
 
         public ArrayList<Instruction> instructions = new ArrayList<>();
-        public byte[] memory = new byte[0x100];
+        public int[] memory = new int[0x100];
         public int pc = 0;
         public int cmp;
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
