@@ -72,7 +72,7 @@ public class Solution {
             int left = Math.max(0, hleft);
             need = Math.min(dist, this.full);
             int c = (need-left) * fsc.c;
-            System.out.println(""+need+"x"+fsc.c);
+            System.out.println(""+(need-left)+"x"+fsc.c+"="+c);
             if (hleft < left) {
                 c += solve(f0, from, idx);
             }
