@@ -29,7 +29,7 @@ public class Solution {
         sc.nextLine();
         sc.useDelimiter(",");
         ArrayList<Item> itms = new ArrayList<>();
-        Pattern p = Pattern.compile("[A-Za-z0-9]+");
+        Pattern p = Pattern.compile("[^,]+");
         Item itm;
 
         while (sc.hasNextLine()) {
@@ -42,11 +42,11 @@ public class Solution {
                 itm.name = nm;
                 sc.skip(",");
                 itm.weight = sc.nextInt();
-                sc.skip(",");
+                System.out.println(sc.next());
                 itm.value = sc.nextInt();
                 itms.add(itm);
+                sc.nextLine();
             }
-            sc.nextLine();
         }
     }
 
