@@ -20,9 +20,11 @@ public class Solution {
     }
 
     private void expand(int pi, long da) {
-
-        Tree<Flight>[] fli = fls[];
-
+        int p = visi.length;
+        TreeSet<Flight>[] fli = fls[pi];
+        for(int pj = 0; pj < p; pj++) {
+            
+        }
     }
 
     private class Flight implements Comparable<Flight> {
