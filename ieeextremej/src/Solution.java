@@ -46,8 +46,8 @@ public class Solution {
         for(Integer e : err1) {
             System.out.println("i_1="+(e+0x01));
         }
-        for(Integer e : err1) {
-            System.out.println("i_1="+(e+0x01));
+        for(Integer e : err2) {
+            System.out.println("i1="+((e>>0x10)+0x01)+" i2="+((e & 0xff)+0x01));
         }
     }
 
