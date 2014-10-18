@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -26,7 +25,6 @@ public class Solution {
         String[] ia;
         Pattern parser0 = Pattern.compile("^(\\w+ +)?(\\w+) +(.+)$");
         State state = new State();
-        state.memory = new byte[mem];
         int counter = 0;
         while (sc.hasNextLine()) {
             line = sc.nextLine();
