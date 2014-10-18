@@ -16,4 +16,4 @@ main = do
     a <- getLine
     b <- getLine
     c <- getLine
-    print (siu (map (read :: Int) (words b)) (read c))
+    print (siu (map (read :: Int) (words b)) (read c :: Int))
