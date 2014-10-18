@@ -114,7 +114,7 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        state.Store(instruction.args.get(1),instruction.args.get(0));
+                        state.Store(instruction.args.get(1),state.Load(instruction.args.get(0)));
                     }
                 },
         Add {
