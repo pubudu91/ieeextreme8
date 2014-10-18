@@ -1,9 +1,7 @@
 import Data.List
 
-x
-
 --ferats :: [Int]
-ferats a = nub [(a,b)|a<-[2..1000],b<-[1..(a-1)],let cc = a*a-b*b, let c = floor ( sqrt ( fromIntegral cc)), b*b<cc,cc == c*c]
+ferats a = nub [(b,c)|b<-[1..(a-1)],let cc = a*a-b*b, let c = floor ( sqrt ( fromIntegral cc)), b*b<cc,cc == c*c]
 
 --solve :: [String] -> String
 --solve = solve' . map (read)
