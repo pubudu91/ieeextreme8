@@ -1,4 +1,7 @@
+solve [Int] -> [Int] -> Int
+solve ()
+
 main = do
     nmk <- getLine
     vls <- getLine
-    solve ( map (read) (words nmk))
+    print solve (map (read) (words nmk)) (map (read) (words vls))
