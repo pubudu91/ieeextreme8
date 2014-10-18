@@ -4,7 +4,7 @@ import Data.List
 --ferats :: [Int]
 ferats a = [b|b<-[1..(a-1)],let cc = a*a-b*b, cc > 0, let c = floor ( sqrt ( fromIntegral cc)), b*b<=cc,cc == c*c]
 
-vferats :: Int -> Int -> Bool
+vferats :: Int ->  -> Int -> Bool
 vferats a b = cc == c*c
     where cc = a*a-b*b
           c = floor ( sqrt ( fromIntegral cc))
