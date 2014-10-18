@@ -1,5 +1,6 @@
 
 import java.util.HashMap;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.regex.Pattern;
@@ -13,6 +14,7 @@ public class Solution {
     private HashMap<String, Integer> names;
     private TreeSet<Flight>[][] fls;
     private boolean[] visi;
+    private PriorityQueue<Traveler> pq = new PriorityQueue<>();
 
     private void query(int pi, long da, int pj) {
         this.visi = new boolean[names.size()];
@@ -20,7 +22,7 @@ public class Solution {
     }
 
     private void expand(int pi, long da) {
-        Flight flt = new Flight();
+        Flight flt = new Flight(da);
         int p = visi.length;
         TreeSet<Flight>[] fli = fls[pi];
         boolean[] visi = this.visi;
@@ -28,7 +30,7 @@ public class Solution {
         for(int pj = 0; pj < p; pj++) {
             if(!visi[pj]) {
                 TreeSet<Flight> flij = fli[pj];
-                flij.ceiling(null)
+                flij.ceiling(null);
             }
         }
     }
@@ -37,6 +39,10 @@ public class Solution {
 
         public long from;
         public long to;
+        
+        public Flight(long from) {
+            this(from,0x00);
+        }
 
         public Flight(long from, long to) {
             this.from = from;
