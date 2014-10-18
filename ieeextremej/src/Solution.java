@@ -27,6 +27,7 @@ public class Solution {
                 System.out.print(ar / 1440);
                 System.out.print(' ');
                 System.out.print(ar % 1440);
+                System.out.println();
                 return;
             } else {
                 expand(t.pj, t.da);
@@ -47,7 +48,9 @@ public class Solution {
                 if (!visi[pj]) {
                     TreeSet<Flight> flij = fli[pj];
                     Flight flu = flij.ceiling(flt);
-                    pq.add(new Traveler(pj, flu.to + 60));
+                    if (flu != null) {
+                        pq.add(new Traveler(pj, flu.to + 60));
+                    }
                 }
             }
         }
