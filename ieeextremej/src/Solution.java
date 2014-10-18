@@ -83,8 +83,8 @@ public class Solution {
         int cfgv = 0x00;
         int cfgm = 0x00;
         for (int cfg = 0x00; cfg < nim; cfg++) {
-            System.out.println("cfg"+cfg);
             int vl = calc(itms, tot, cfg);
+            System.out.println("cfg"+cfg+"/"+vl);
             if(vl > cfgv) {
                 cfgv = vl;
                 cfgm = cfg;
@@ -106,12 +106,12 @@ public class Solution {
     }
 
     private int calc(ArrayList<Item> itms, int rem, int cfg) {
-        int vl = 0x00;
+        int vl = 0;
         int i = 0;
         for (Item itmi : itms) {
             int wgh = itmi.weight;
             int take = Math.max(0x00, (rem / wgh) - ((cfg >> i) & 0x01));
-            vl += take * itmi.weight;
+            vl += take * itmi.value;
             itmi.take = take;
             rem -= wgh * take;
         }
