@@ -69,7 +69,7 @@ public class Solution {
             int idx = this.index;
             int dist = fst.d-fsc.d;
             int left = Math.max(0,f0-fsc.d);
-            need = Math.min(fsf.d - fsc.d-left, this.full);
+            need = Math.min(dist-left, this.full);
             int c = need * fsc.c;
             c += solve(f0, from, index);
             c += solve(need, from, to);
