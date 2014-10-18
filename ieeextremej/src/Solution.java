@@ -40,19 +40,19 @@ public class Solution {
         fi.d = 0;
         fi.c = Integer.MAX_VALUE;
         fss[0] = fi;
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             fi = new FS();
             fi.d = sc.nextInt();
             fi.c = sc.nextInt();
             fss[i] = fi;
         }
         fi = new FS();
-        fi.d = 0;
+        fi.d = l;
         fi.c = Integer.MAX_VALUE;
-        fss[0] = fi;
+        fss[n+0x01] = fi;
         Arrays.sort(fss);
         this.fss = fss;
-        System.out.println(solve(t,0,));
+        System.out.println(solve(t,0,n+1));
         
     }
     
