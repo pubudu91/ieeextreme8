@@ -24,11 +24,12 @@ public class Solution {
         String il;
         String io;
         String[] ia;
-        Pattern parser0 = Pattern.compile("^(\\w+)? *(\\w+) +(\\w+)$");
+        Pattern parser0 = Pattern.compile("^(\\w+)? *(\\w+) +(.+)$");
         State state = new State();
         int counter = 0;
         while (sc.hasNextLine()) {
             line = sc.nextLine();
+            System.out.println(line);
             Matcher m = parser0.matcher(line);
             m.find();
             il = m.group(1);
