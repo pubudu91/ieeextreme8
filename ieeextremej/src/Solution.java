@@ -91,12 +91,12 @@ public class Solution {
         Argument arg = new Argument();
         if(ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
-            arg.val = Integer.parseInt(ia.substring(0x01,ia.length()-0x01));
+            arg.addr = Integer.parseInt(ia.substring(0x01,ia.length()-0x01));
         } else if(ia.startsWith("#")) {
             arg.meth = Argdres.Constant;
-            arg.val = Integer.parseInt(ia.substring(0x01));
+            arg.addr = Integer.parseInt(ia.substring(0x01));
         } else {
-            arg.val = Integer.parseInt(ia);
+            arg.addr = Integer.parseInt(ia);
         }
         return arg;
     }
@@ -185,14 +185,14 @@ public class Solution {
     private class Argument {
 
         public Argdres meth = Argdres.Adres;
-        public int val;
+        public int addr;
 
         private void store(State state, byte val) {
-            meth.fetchAdress(val, state);
+            state.memory[meth.fetchAdress(this.addr, state)] = val;
         }
 
         private byte load(State state) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            return meth.fetchMem(this.addr, state);
         }
 
     }
@@ -202,7 +202,7 @@ public class Solution {
         Adres {
 
             @Override
-            public int fetchMem(int value, State state) {
+            public byte fetchMem(int value, State state) {
                 return state.memory[value];
             }
 
@@ -215,7 +215,7 @@ public class Solution {
         Constant {
 
             @Override
-            public int fetchMem(int value, State state) {
+            public byte fetchMem(int value, State state) {
                 return value;
             }
 
@@ -227,7 +227,7 @@ public class Solution {
         Reference {
 
             @Override
-            public int fetchMem(int value, State state) {
+            public byte fetchMem(int value, State state) {
                 return state.memory[state.memory[value]];
             }
 
@@ -237,7 +237,7 @@ public class Solution {
             }
         };
         
-        public abstract int fetchMem (int value, State state);
+        public abstract byte fetchMem (int value, State state);
         
         public abstract int fetchAdress (int value, State state);
     }
