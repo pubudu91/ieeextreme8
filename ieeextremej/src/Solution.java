@@ -47,6 +47,12 @@ public class Solution {
     private int solve (int f0, int from, int to) {
         FS fsf = this.fss[from];
         FS fst = this.fss[to];
+        int need = fst.d-fsf.d;
+        if(need <= f0) {
+            return 0x00;
+        } else {
+            FS fsc = cheapest(from,to);
+        }
     }
 
     public FS cheapest(int from, int to) {
