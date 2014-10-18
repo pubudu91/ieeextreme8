@@ -23,9 +23,11 @@ public class Solution {
         while(pq.size() > 0x00) {
             Traveler t = pq.remove();
             if(t.pj == target) {
+                
                 return;
             }
         }
+        System.out.println("No trip on XSL");
         
     }
 
