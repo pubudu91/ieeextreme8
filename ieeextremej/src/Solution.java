@@ -70,7 +70,7 @@ public class Solution {
         if (need <= f0) {
             return 0x00;
         } else {
-            FS fsc = cheapest(from + 0x01, to);
+            FS fsc = cheapest(from, to);
             if (fsc == null) {
                 throw new Exception();
             }
@@ -92,14 +92,13 @@ public class Solution {
     }
 
     public FS cheapest(int from, int to) {
-        from = Math.max(1, from);
         int c = Integer.MAX_VALUE;
         FS min = null;
         FS[] fss = this.fss;
         to = Math.min(fss.length - 0x01, to);
         FS fi;
         int mini = -1;
-        for (int i = from; i < to; i++) {
+        for (int i = from+0x01; i < to; i++) {
             fi = fss[i];
             if (fi.c < c) {
                 c = fi.c;
