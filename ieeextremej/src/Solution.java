@@ -37,6 +37,7 @@ public class Solution {
                     state.labels.put(il, counter);
                 }
                 Instruction ins = new Instruction();
+                System.out.println(m);
                 io = m.group(2).toLowerCase();
                 ins.op = decodeIns(io,ins);
                 ia = m.group(3).split(",");
