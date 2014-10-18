@@ -3,6 +3,8 @@ import Data.List
 --ferats :: [Int]
 ferats a = nub [(b,c)|b<-[1..(a-1)],let cc = a*a-b*b, let c = floor ( sqrt ( fromIntegral cc)), b*b<cc,cc == c*c]
 
+solve :
+
 --solve :: [String] -> String
 --solve = solve' . map (read)
 
