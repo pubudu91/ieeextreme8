@@ -22,6 +22,9 @@ public class Solution {
         int r = sc.nextInt();
         int c = sc.nextInt();
         int[] rs = new int[r];
+        for(int i = 0; i < r; i++) {
+            rs[i] = Integer.parseInt(sc.nextLine().replaceAll(" ",""),0x02);
+        }
     }
     
 }
