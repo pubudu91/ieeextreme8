@@ -94,6 +94,7 @@ public class Solution {
             }
         }
         System.out.println("%s,%s",w,v);
+        System.out.println("Each robber gets: %.2f",(double) v/r);
     }
     
 }
