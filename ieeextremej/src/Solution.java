@@ -49,6 +49,7 @@ public class Solution {
                     TreeSet<Flight> flij = fli[pj];
                     Flight flu = flij.ceiling(flt);
                     if (flu != null) {
+                        System.out.println("schedule to " + pj + " at " + flu.from);
                         pq.add(new Traveler(pj, flu.to + 60));
                     }
                 }
