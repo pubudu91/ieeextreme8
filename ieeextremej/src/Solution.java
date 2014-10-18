@@ -146,7 +146,7 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         int a = state.load(instruction.args.get(0));
                         int b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1), (byte) (b + a));
+                        state.store(instruction.args.get(1), (b + a)&0xff);
                     }
                 },
         Sub {
@@ -155,7 +155,7 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         int a = state.load(instruction.args.get(0));
                         int b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1), (byte) (b + a));
+                        state.store(instruction.args.get(1), (b + a)&0xff);
                     }
                 },
         And {
@@ -313,7 +313,7 @@ public class Solution {
             return arg.load(this);
         }
 
-        public void store(Argument arg, byte val) {
+        public void store(Argument arg, int val) {
             arg.store(this, val);
         }
 
