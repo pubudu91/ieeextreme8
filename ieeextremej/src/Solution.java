@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -27,7 +28,7 @@ public class Solution {
         }
         int k = 0x00;
         ArrayList<Integer> err = new ArrayList<Integer>();
-        for(int i1 = 0x00; i < ) {
+        for(int i1 = 0x00; i1 < r-0x01; i1++) {
             
         }
     }
