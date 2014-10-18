@@ -9,6 +9,7 @@ type State = (AVL (Int,Int),Int,AVL (Int,Int))
 initialize :: Int -> [Int] -> State
 initialize k as = 
     
+insertavl :: AVL (Int,Int) -> 
 
 --main = do
 --    nmk <- getLine
