@@ -80,18 +80,25 @@ public class Solution {
         }
         Collections.sort(itms);
         int nim = 0x01 << itms.size();
+        int cfgv = 0x00;
+        int cfgm = 0x00;
         for (int cfg = 0x00; cfg < nim; cfg++) {
             int rem = tot;
             int vl = 0x00;
             int i = 0;
             for (Item itmi : itms) {
                 int wgh = itmi.weight;
-                int take = Math.max(0x00,(rem / wgh)-((cfg>>i)&0x01));
-                vl += take*itmi.weight;
+                int take = Math.max(0x00, (rem / wgh) - ((cfg >> i) & 0x01));
+                vl += take * itmi.weight;
                 itmi.take = take;
                 rem -= wgh * take;
             }
+            if(vl > cfgv) {
+                cfgv = vl;
+                cfgm = cfg;
+            }
         }
+        
         Collections.sort(itms, new Sorter());
         int v = 0x00;
         int w = 0x00;
