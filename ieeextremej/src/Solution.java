@@ -87,9 +87,9 @@ public class Solution {
         Argument arg = new Argument();
         if(ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
-            arg.val = Integer.parseInt(ia.substring(0x01,ia.length()-0x02));
+            arg.val = Integer.parseInt(ia.substring(0x01,ia.length()-0x01));
         } else if(ia.startsWith("#")) {
-            
+            arg.val = Integer.parseInt(ia.substring(0x01));
         } else {
             
         }
