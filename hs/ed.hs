@@ -1,4 +1,4 @@
-
+softorder :: Int -> Int64 -> Ordering
 
 
 solve :: [Int] -> [Int] -> Int
