@@ -64,7 +64,6 @@ public class Solution {
         
         while (sc.hasNextLine()) {
             String nm = sc.next(p);
-            System.out.println(nm);
             if (nm.equals("END")) {
                 break;
             } else {
@@ -73,8 +72,10 @@ public class Solution {
                 itm.weight = sc.nextInt();
                 itm.value = sc.nextInt();
                 itms.add(itm);
+                System.out.println("ADDED");
             }
         }
+        System.out.println("STARt");
         Collections.sort(itms);
         int rem = tot;
         for(Item itmi : itms) {
@@ -93,8 +94,8 @@ public class Solution {
                 v += itmi.totalV();
             }
         }
-        System.out.println("%s,%s",w,v);
-        System.out.println("Each robber gets: %.2f",(double) v/r);
+        System.out.println(String.format("%s,%s",w,v));
+        System.out.println(String.format("Each robber gets: %.2f",(double) v/r));
     }
     
 }
