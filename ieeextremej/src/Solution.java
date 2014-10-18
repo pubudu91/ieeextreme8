@@ -40,7 +40,11 @@ public class Solution {
             int length = sc.nextInt();
 
             for (int i = 0; i < nGas; i++) {
-
+                int di = sc.nextInt();
+                int ci = sc.nextInt();
+                if (di < l) {
+                    fss.add(new FS(di, ci));
+                }
             }
         }
     }
