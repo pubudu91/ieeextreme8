@@ -34,7 +34,7 @@ public class Solution {
             }
         }
         for (int i1 = 0x00; i1 < r - 0x02; i1++) {
-            for (int i2 = i1+0x01; i2 < r - 0x01; i1++) {
+            for (int i2 = i1+0x01; i2 < r - 0x01; i2++) {
                 int res = (rs[i1] ^ rs[i1 + 0x01]) & (~(rs[i1 + 0x01] ^ rs[r - 0x01]));
                 if (res == 0x00) {
                     err1.add(i1);
