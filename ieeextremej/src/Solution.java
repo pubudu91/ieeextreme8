@@ -16,7 +16,12 @@ public class Solution {
 
     private void query(int pi, long da, int pj) {
         this.visi = new boolean[names.size()];
-        expand();
+        expand(pi);
+    }
+
+    private void expand(int pi) {
+        Tree<Flight>[] fli = fls[];
+        
     }
 
     private class Flight implements Comparable<Flight> {
