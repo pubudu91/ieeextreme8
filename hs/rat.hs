@@ -11,10 +11,8 @@ vferats a b d = e*b == a*d && cc == c*c
           c = floor ( sqrt ( fromIntegral cc))
 
 solve'' :: Int -> Int -> Bool
-solve'' a b | a < b = solve'' b a
-solve'' a b | otherwise = a == fb && (any (vferats b a) (ferats a))
-    where f = a/b
-          fb = f*b
+solve'' a b | a > b = solve'' b a
+solve'' a b | otherwise = (any (vferats b a) (ferats a))
 
 solve :: [String] -> String
 solve = solve' . map (read)
