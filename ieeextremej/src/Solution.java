@@ -92,12 +92,12 @@ public class Solution {
         arg.label = ia;
         if (ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
-            arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01));
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01),16);
         } else if (ia.startsWith("#")) {
             arg.meth = Argdres.Constant;
-            arg.addr = (byte) Integer.parseInt(ia.substring(0x01));
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01),16);
         } else {
-            arg.addr = (byte) Integer.parseInt(ia);
+            arg.addr = (byte) Integer.parseInt(ia,16);
         }
         return arg;
     }
