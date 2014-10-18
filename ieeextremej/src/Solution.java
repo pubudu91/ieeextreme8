@@ -70,30 +70,25 @@ public class Solution {
             int dist = fst.d - fsc.d;
             int hleft = f0 - fsc.d;
             int left = Math.max(0, hleft);
-            int full = this.full;
-            if (dist - left < full) {
-                need = dist - left;
-            } else {
-                need = full - left;
-            }
-            int c = need * fsc.c;
-            System.out.println("" + need + "x" + fsc.c);
+            need = Math.min(dist, this.full);
+            int c = (need-left) * fsc.c;
+            System.out.println(""+need+"x"+fsc.c);
             if (hleft < left) {
                 c += solve(f0, from, index);
             }
             if (dist - left > need) {
-                c += solve(left + need, from, to);
+                c += solve(need, from, to);
             }
             return c;
         }
     }
 
     public FS cheapest(int from, int to) {
-        from = Math.max(1, from);
+        from = Math.max(1,from);
         int c = Integer.MAX_VALUE;
         FS min = null;
         FS[] fss = this.fss;
-        to = Math.min(fss.length - 0x01, to);
+        to = Math.min(fss.length-0x01,to);
         FS fi;
         int mini = -1;
         for (int i = from; i < to; i++) {
