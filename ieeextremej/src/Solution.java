@@ -59,12 +59,12 @@ public class Solution {
         sc.nextLine();
         sc.useDelimiter("[\n\t\r,]+");
         ArrayList<Item> itms = new ArrayList<>();
-        Pattern p = Pattern.compile("[^,\n\t\r]+");
+        Pattern p = Pattern.compile("[^,\n\t\r ]+");
         Item itm;
         
         while (sc.hasNextLine()) {
             String nm = sc.next(p);
-            System.out.println("nw");
+            System.out.println("\""+nm+"\"");
             if (nm.toLowerCase().equals("end")) {
                 System.out.println("ENDED NWO");
                 break;
