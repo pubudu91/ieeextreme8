@@ -34,10 +34,11 @@ public class Solution {
     private long next (long s) {
         long res = 0x00l;
         for(int m = this.n-0x02; m >= 0x00; m--) {
-            System.out.print(Long.toBinaryString((s>>m)&0x07));
-            System.out.print("->");
-            res |= ((r>>((s>>m)&0x07))&0x01)<<(m+0x01);
-            System.out.println(Long.toBinaryString(((r>>((s>>m)&0x07))&0x01)));
+            //System.out.print(Long.toBinaryString((s>>m)&0x07));
+            //System.out.print("->");
+            long b = ((r>>((s>>m)&0x07))&0x01);
+            res |= b <<(m+0x01);
+            //System.out.println(Long.toBinaryString(((r>>((s>>m)&0x07))&0x01)));
         }
         res |= ((r>>((s<<0x01)&0x07))&0x01);
         return res;
