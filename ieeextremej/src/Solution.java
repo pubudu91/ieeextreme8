@@ -12,11 +12,11 @@ public class Solution {
 
     private HashMap<String, Integer> names;
     private TreeSet<Flight>[][] fls;
-    //private ;
+    private boolean[] visi;
 
     private void query(int pi, long da, int pj) {
-        boolean[] visi = new boolean[names.size()];
-        //expand();
+        this.visi = new boolean[names.size()];
+        expand();
     }
 
     private class Flight implements Comparable<Flight> {
