@@ -54,7 +54,7 @@ public class Solution {
         }
         System.out.print('-');
         for(long m = n-0x01; m >= 0x00; m--) {
-            if(((state>>m)&0x01) != 0x00) {
+            if(((state>>>m)&0x01) != 0x00) {
                 System.out.print('*');
             } else {
                 System.out.print(' ');
