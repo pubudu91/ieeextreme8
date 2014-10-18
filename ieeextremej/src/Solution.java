@@ -23,12 +23,11 @@ public class Solution {
         this.r = sc.nextInt();
         int m = sc.nextInt();
         this.n = sc.nextInt();
-        long s = sc.nextLong();
-        for(int i = 0x01; i < m; i++) {
+        long so = sc.nextLong(), s = so+0x01;
+        for(int i = 0x01; i <= m; i++) {
             printState(i,s,n);
             s = next(s);
         }
-        printState(m,s,n);
     }
     
     private long next (long s) {
