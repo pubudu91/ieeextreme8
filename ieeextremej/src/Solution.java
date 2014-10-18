@@ -9,6 +9,8 @@ import java.util.Scanner;
  */
 public class Solution {
     
+    public FS[] fss; 
+    
     private class FS implements Comparable<FS>  {
         
         public int d;
@@ -39,10 +41,11 @@ public class Solution {
             fss[i] = fi;
         }
         Arrays.sort(fss);
-        
+        this.fss = fss;
     }
     
     public FS cheapest (int from, int to) {
+        int c = Integer.MAX_VALUE;
         return null;
     }
     
