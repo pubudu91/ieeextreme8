@@ -8,10 +8,15 @@ import java.util.Scanner;
  */
 public class Solution {
     
-    private class FS {
+    private class FS implements Comparable<FS>  {
         
         public int d;
         public int c;
+
+        @Override
+        public int compareTo(FS t) {
+            return ((Integer) d).compareTo(t.d);
+        }
         
     }
 
@@ -25,6 +30,10 @@ public class Solution {
         int f = sc.nextInt();
         int t = sc.nextInt();
         int l = sc.nextInt();
+        FS[] fss = new FS[n];
+        for(int i = 0; i < n; i++) {
+            
+        }
     }
 
 }
