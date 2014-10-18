@@ -7,6 +7,13 @@ import java.util.Scanner;
  * @author kommusoft
  */
 public class Solution {
+    
+    private class FS {
+        
+        public int d;
+        public int c;
+        
+    }
 
     public static void main(String[] args) {
         new Solution().run();
