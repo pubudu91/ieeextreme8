@@ -240,7 +240,7 @@ public class Solution {
         }
 
         private void store(State state, int val) {
-            state.memory[meth.fetchAdress(this.addr, state)] = val;
+            state.memory[meth.fetchAdress(this.addr, state)] = val&0xff;
         }
 
         private int load(State state) {
