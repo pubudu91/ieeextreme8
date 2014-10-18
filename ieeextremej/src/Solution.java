@@ -28,13 +28,16 @@ public class Solution {
         int k = sc.nextInt();
         int tot = r*k;
         sc.nextLine();
-        ArrayList<Item> al = new ArrayList<>();
+        ArrayList<Item> itms = new ArrayList<>();
+        Item itm;
         while(sc.hasNextLine()) {
             String nm = sc.next("\\w+");
             if(nm.equals("END")) {
                 break;
             } else {
-                
+                itm = new Item();
+                itm.name = nm;
+                itms.add(itm);
             }
             sc.nextLine();
         }
