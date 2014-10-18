@@ -45,6 +45,7 @@ public class Solution {
                 counter++;
             }
         }
+        System.out.println("IO");
         state.run();
     }
 
