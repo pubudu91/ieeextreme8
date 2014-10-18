@@ -8,6 +8,10 @@
  *
  * @author kommusoft
  */
-public class Eighty {
-    
+public class Solution {
+
+    public static void main(String[] args) {
+
+    }
+
 }
