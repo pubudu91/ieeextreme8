@@ -20,6 +20,12 @@ public class Solution {
         int r = sc.nextInt();
         int m = sc.nextInt();
         int n = sc.nextInt();
+        int s = sc.nextInt();
+        
+    }
+    
+    private static void PrintState () {
+        
     }
 
 }
