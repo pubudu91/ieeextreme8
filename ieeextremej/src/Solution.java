@@ -38,7 +38,7 @@ public class Solution {
             Instruction ins = new Instruction();
             io = m.group(2).toLowerCase();
             ia = m.group(3).split(",");
-            for(String iai : ia) {
+            for (String iai : ia) {
                 ins.args.add(decodeArgument(iai));
             }
             counter++;
@@ -89,83 +89,83 @@ public class Solution {
 
     public Argument decodeArgument(String ia) {
         Argument arg = new Argument();
-        if(ia.startsWith("(")) {
+        if (ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
-            arg.addr = Integer.parseInt(ia.substring(0x01,ia.length()-0x01));
-        } else if(ia.startsWith("#")) {
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01));
+        } else if (ia.startsWith("#")) {
             arg.meth = Argdres.Constant;
-            arg.addr = Integer.parseInt(ia.substring(0x01));
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01));
         } else {
-            arg.addr = Integer.parseInt(ia);
+            arg.addr = (byte) Integer.parseInt(ia);
         }
         return arg;
     }
 
     public enum Opcode {
 
-        Print{
+        Print {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        Move{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        Move {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        Add{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        Add {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        Sub{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        Sub {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        And{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        And {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        Or{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        Or {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        Xor{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        Xor {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        Comp{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        Comp {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        },
-        Jmp{
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                },
+        Jmp {
 
-            @Override
-            public void run(Instruction instruction, State state) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
+                    @Override
+                    public void run(Instruction instruction, State state) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                };
 
         public abstract void run(Instruction instruction, State state);
     }
@@ -177,7 +177,7 @@ public class Solution {
         public ArrayList<Argument> args = new ArrayList<>();
 
         private void run(State state) {
-            op.run(this,state);
+            op.run(this, state);
         }
 
     }
@@ -185,7 +185,7 @@ public class Solution {
     private class Argument {
 
         public Argdres meth = Argdres.Adres;
-        public int addr;
+        public byte addr;
 
         private void store(State state, byte val) {
             state.memory[meth.fetchAdress(this.addr, state)] = val;
@@ -201,45 +201,45 @@ public class Solution {
 
         Adres {
 
-            @Override
-            public byte fetchMem(int value, State state) {
-                return state.memory[value];
-            }
+                    @Override
+                    public byte fetchMem(byte value, State state) {
+                        return state.memory[value];
+                    }
 
-            @Override
-            public int fetchAdress(int value, State state) {
-                return value;
-            }
-            
-        },
+                    @Override
+                    public int fetchAdress(byte value, State state) {
+                        return value;
+                    }
+
+                },
         Constant {
 
-            @Override
-            public byte fetchMem(int value, State state) {
-                return value;
-            }
+                    @Override
+                    public byte fetchMem(byte value, State state) {
+                        return value;
+                    }
 
-            @Override
-            public int fetchAdress(int value, State state) {
-                return -0x01;
-            }
-        },
+                    @Override
+                    public int fetchAdress(byte value, State state) {
+                        return -0x01;
+                    }
+                },
         Reference {
 
-            @Override
-            public byte fetchMem(int value, State state) {
-                return state.memory[state.memory[value]];
-            }
+                    @Override
+                    public byte fetchMem(byte value, State state) {
+                        return state.memory[state.memory[value]];
+                    }
 
-            @Override
-            public int fetchAdress(int value, State state) {
-                return state.memory[value];
-            }
-        };
-        
-        public abstract byte fetchMem (int value, State state);
-        
-        public abstract int fetchAdress (int value, State state);
+                    @Override
+                    public int fetchAdress(byte value, State state) {
+                        return state.memory[value];
+                    }
+                };
+
+        public abstract byte fetchMem(byte value, State state);
+
+        public abstract int fetchAdress(byte value, State state);
     }
 
     private class State {
@@ -250,18 +250,18 @@ public class Solution {
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
 
         private void run() {
-            while(pc < instructions.size()) {
+            while (pc < instructions.size()) {
                 Instruction ins = instructions.get(pc++);
                 ins.run(this);
             }
         }
-        
-        public byte Load (Argument arg) {
+
+        public byte Load(Argument arg) {
             return arg.load(this);
         }
-        
-        public void Store (Argument arg) {
-            arg.store(this);
+
+        public void Store(Argument arg, byte val) {
+            arg.store(this, val);
         }
 
     }
