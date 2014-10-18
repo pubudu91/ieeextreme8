@@ -83,10 +83,11 @@ public class Solution {
     }
 
     public FS cheapest(int from, int to) {
-        Math max;
+        from = Math.max(1,from);
         int c = Integer.MAX_VALUE;
         FS min = null;
         FS[] fss = this.fss;
+        to = Math.min(fss.length-0x01,to);
         FS fi;
         int mini = -1;
         for (int i = from; i < to; i++) {
