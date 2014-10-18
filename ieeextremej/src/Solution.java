@@ -65,14 +65,17 @@ public class Solution {
         if (need <= f0) {
             return 0x00;
         } else {
-            FS fsc = cheapest(from+0x01, to);
+            FS fsc = cheapest(from + 0x01, to);
+            if (fsc == null) {
+                throw new IllegalStateException();
+            }
             int idx = this.index;
             int dist = fst.d - fsc.d;
-            int hleft = f0 - (fsc.d-fsf.d);
+            int hleft = f0 - (fsc.d - fsf.d);
             int left = Math.max(0, hleft);
             need = Math.min(dist, this.full);
-            int c = (need-left) * fsc.c;
-            System.out.println(""+(need-left)+"x"+fsc.c+"="+c);
+            int c = (need - left) * fsc.c;
+            System.out.println("" + (need - left) + "x" + fsc.c + "=" + c);
             if (hleft < left) {
                 c += solve(f0, from, idx);
             }
@@ -84,11 +87,11 @@ public class Solution {
     }
 
     public FS cheapest(int from, int to) {
-        from = Math.max(1,from);
+        from = Math.max(1, from);
         int c = Integer.MAX_VALUE;
         FS min = null;
         FS[] fss = this.fss;
-        to = Math.min(fss.length-0x01,to);
+        to = Math.min(fss.length - 0x01, to);
         FS fi;
         int mini = -1;
         for (int i = from; i < to; i++) {
