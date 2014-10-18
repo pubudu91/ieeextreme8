@@ -54,6 +54,7 @@ public class Solution {
     }
 
     public Opcode decodeIns(String io, Instruction ins) {
+        System.out.println("\""+io+"\"");
         switch (io) {
             case "print":
                 return Opcode.Print;
