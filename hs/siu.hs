@@ -7,4 +7,6 @@ summ a b = mod (a+b) 1000000007
 solve :: [String] -> String
 solve = siu . map (read)
 
-main = do 
+main = do
+    a <- getLine
+    b <- getLine
