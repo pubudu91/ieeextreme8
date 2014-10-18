@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -37,6 +38,13 @@ public class Solution {
             fi.c = sc.nextInt();
             fss[i] = fi;
         }
+        Arrays.sort(fss);
+        
     }
+    
+    public FS cheapest (int from, int to) {
+        return null;
+    }
+    
 
 }
