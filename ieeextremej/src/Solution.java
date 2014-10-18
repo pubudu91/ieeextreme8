@@ -38,10 +38,12 @@ public class Solution {
                 }
                 Instruction ins = new Instruction();
                 io = m.group(2).toLowerCase();
+                ins.op = decodeIns(io,ins);
                 ia = m.group(3).split(",");
                 for (String iai : ia) {
                     ins.args.add(decodeArgument(iai));
                 }
+                state.instructions.add(ins);
                 counter++;
             } else {
                 break;
