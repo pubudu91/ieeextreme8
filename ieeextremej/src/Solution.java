@@ -163,6 +163,12 @@ public class Solution {
             db *= 1440;
             db += sc.nextInt();
             Flight fli = new Flight(da, db);
+            TreeSet<Flight> tij = fls[pi][pj];
+            boolean rem;
+            do {
+                rem = false;
+                Flight alt = tij.floor(fli);
+            } while(rem);
             fls[pi][pj].add(fli);
         }
         this.fls = fls;
