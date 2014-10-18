@@ -23,7 +23,8 @@ public class Solution {
         this.r = sc.nextInt();
         int m = sc.nextInt();
         this.n = sc.nextInt();
-        long s = sc.nextLong();
+        //long s = sc.nextLong();
+        long s = -0x01;
         for(int i = 0x01; i < m; i++) {
             printState(i,s,n);
             s = next(s);
