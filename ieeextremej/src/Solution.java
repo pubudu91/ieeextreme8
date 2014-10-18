@@ -45,7 +45,6 @@ public class Solution {
                 counter++;
             }
         }
-        System.out.println("IO");
         state.run();
     }
 
@@ -301,8 +300,10 @@ public class Solution {
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
 
         private void run() {
+            System.out.println("Whee");
             while (pc < instructions.size()) {
                 Instruction ins = instructions.get(pc++);
+                System.out.println(ins.op);
                 ins.run(this);
             }
         }
