@@ -55,7 +55,10 @@ public class Solution {
         Collections.sort(itms);
         int rem = tot;
         for(Item itmi : itms) {
-            
+            int wgh = itmi.weight;
+            int take = rem/wgh;
+            itmi.take = take;
+            rem -= wgh*take;
         }
     }
     
