@@ -41,7 +41,11 @@ public class Solution {
         }
         Arrays.sort(fss);
         this.fss = fss;
-        int[] gas = new int[n];
+        
+    }
+    
+    private int solve (int f0, int from, int to) {
+        
     }
 
     public FS cheapest(int from, int to) {
