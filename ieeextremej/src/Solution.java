@@ -144,8 +144,8 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        byte a = state.load(instruction.args.get(0));
-                        byte b = state.load(instruction.args.get(1));
+                        int a = state.load(instruction.args.get(0));
+                        int b = state.load(instruction.args.get(1));
                         state.store(instruction.args.get(1), (byte) (b + a));
                     }
                 },
@@ -153,8 +153,8 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        byte a = state.load(instruction.args.get(0));
-                        byte b = state.load(instruction.args.get(1));
+                        int a = state.load(instruction.args.get(0));
+                        int b = state.load(instruction.args.get(1));
                         state.store(instruction.args.get(1), (byte) (b + a));
                     }
                 },
@@ -162,8 +162,8 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        byte a = state.load(instruction.args.get(0));
-                        byte b = state.load(instruction.args.get(1));
+                        int a = state.load(instruction.args.get(0));
+                        int b = state.load(instruction.args.get(1));
                         state.store(instruction.args.get(1), (byte) (b & a));
                     }
                 },
@@ -171,8 +171,8 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        byte a = state.load(instruction.args.get(0));
-                        byte b = state.load(instruction.args.get(1));
+                        int a = state.load(instruction.args.get(0));
+                        int b = state.load(instruction.args.get(1));
                         state.store(instruction.args.get(1), (byte) (b | a));
                     }
                 },
@@ -180,8 +180,8 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        byte a = state.load(instruction.args.get(0));
-                        byte b = state.load(instruction.args.get(1));
+                        int a = state.load(instruction.args.get(0));
+                        int b = state.load(instruction.args.get(1));
                         state.store(instruction.args.get(1), (byte) (b ^ a));
                     }
                 },
@@ -189,8 +189,8 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        byte a = state.load(instruction.args.get(0));
-                        byte b = state.load(instruction.args.get(1));
+                        int a = state.load(instruction.args.get(0));
+                        int b = state.load(instruction.args.get(1));
                         int cmp = 0x00;
                         if (a == b) {
                             cmp |= EQ;
@@ -309,7 +309,7 @@ public class Solution {
             }
         }
 
-        public byte load(Argument arg) {
+        public int load(Argument arg) {
             return arg.load(this);
         }
 
