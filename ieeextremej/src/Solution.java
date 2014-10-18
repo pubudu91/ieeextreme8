@@ -125,8 +125,8 @@ public class Solution {
                         if (instruction.args.size() > 1) {
                             e = instruction.args.get(1).address(state);
                         }
-                        //System.out.println(state.cmp);
-                        //System.out.print('/');
+                        System.out.println(state.cmp);
+                        System.out.print('/');
                         printHex(state.memory[b++]);
                         for (; b <= e; b++) {
                             System.out.print(' ');
