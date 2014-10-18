@@ -27,7 +27,7 @@ public class Solution {
     }
     
     private static long next () {
-        for(int b = 0x00; b < n; b++) {
+        for(int b = n-0x01; b < n; b++) {
             
         }
     }
@@ -43,8 +43,8 @@ public class Solution {
             System.out.print(' ');
         }
         System.out.print('-');
-        for(long mask = 0x1l<<(n-0x01); mask != 0x00; mask >>= 0x01) {
-            if((state&mask) != 0x00) {
+        for(long m = n-0x01; m >= 0x00; m--) {
+            if(((state>>m)&0x01) != 0x00) {
                 System.out.print('*');
             } else {
                 System.out.print(' ');
