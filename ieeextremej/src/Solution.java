@@ -34,6 +34,7 @@ public class Solution {
         Item itm;
         
         while(sc.hasNextLine()) {
+            System.out.println();
             String nm = sc.next(p);
             if(nm.equals("END")) {
                 break;
