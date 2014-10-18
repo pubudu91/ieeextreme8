@@ -5,5 +5,5 @@ solve :: [Int] -> String
 solve [a,b] | (elem a ferats) and (elem b ferats) = "TRUE"
             | otherwise = "FALSE"
 
-main = interact (unlines . map (solve . read) . words . tail . lines)
+main = interact (unlines . map (words . solve . read) . tail . lines)
     
