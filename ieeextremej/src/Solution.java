@@ -101,6 +101,10 @@ public class Solution {
         }
         return arg;
     }
+    
+    public static void printHex (byte val) {
+        System.out.print(String.format("0x%2s", Integer.toHexString(val)).replace(' ', '0'));
+    }
 
     public enum Opcode {
 
@@ -113,7 +117,10 @@ public class Solution {
                         if (instruction.args.size() > 1) {
                             e = instruction.args.get(1).address(state);
                         }
-                        return String.format("0x%8s", Integer.toHexString(n)).replace(' ', '0');
+                        for() {
+                            
+                        }
+                        
                     }
                 },
         Move {
