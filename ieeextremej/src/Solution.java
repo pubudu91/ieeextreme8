@@ -101,17 +101,71 @@ public class Solution {
         return arg;
     }
 
-    private enum Opcode {
+    public enum Opcode {
 
-        Print,
-        Move,
-        Add,
-        Sub,
-        And,
-        Or,
-        Xor,
-        Comp,
-        Jmp;
+        Print{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Move{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Add{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Sub{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        And{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Or{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Xor{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Comp{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Jmp{
+
+            @Override
+            public void run(Instruction instruction, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
 
         public abstract void run(Instruction instruction, State state);
     }
@@ -192,6 +246,18 @@ public class Solution {
                 Instruction ins = instructions.get(pc++);
                 ins.run(this);
             }
+        }
+        
+        public void Load (Argument arg) {
+            
+        }
+        
+        public void Store (Argument arg) {
+            
+        }
+        
+        public void Load (Argument arg) {
+            
         }
 
     }
