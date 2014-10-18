@@ -67,7 +67,7 @@ public class Solution {
         } else {
             FS fsc = cheapest(from, to);
             int idx = this.index;
-            int dist = fsf.d-fsc.d;
+            int dist = fst.d-fsc.d;
             int left = Math.max(0,f0-fsc.d);
             need = Math.min(fsf.d - fsc.d-left, this.full);
             int c = need * fsc.c;
