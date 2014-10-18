@@ -30,45 +30,47 @@ public class Solution {
 
     private void run() {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        this.full = sc.nextInt();
-        int t = sc.nextInt();
-        int l = sc.nextInt();
-        FS[] fss = new FS[n+0x02];
-        FS fi;
-        fi = new FS();
-        fi.d = 0;
-        fi.c = Integer.MAX_VALUE;
-        fss[0] = fi;
-        for (int i = 1; i <= n; i++) {
+        int test = sc.nextInt();
+        for (; test > 0; test--) {
+            int n = sc.nextInt();
+            this.full = sc.nextInt();
+            int t = sc.nextInt();
+            int l = sc.nextInt();
+            FS[] fss = new FS[n + 0x02];
+            FS fi;
             fi = new FS();
-            fi.d = sc.nextInt();
-            fi.c = sc.nextInt();
-            fss[i] = fi;
+            fi.d = 0;
+            fi.c = Integer.MAX_VALUE;
+            fss[0] = fi;
+            for (int i = 1; i <= n; i++) {
+                fi = new FS();
+                fi.d = sc.nextInt();
+                fi.c = sc.nextInt();
+                fss[i] = fi;
+            }
+            fi = new FS();
+            fi.d = l;
+            fi.c = Integer.MAX_VALUE;
+            fss[n + 0x01] = fi;
+            Arrays.sort(fss);
+            this.fss = fss;
+            System.out.println(solve(t, 0, n + 1));
         }
-        fi = new FS();
-        fi.d = l;
-        fi.c = Integer.MAX_VALUE;
-        fss[n+0x01] = fi;
-        Arrays.sort(fss);
-        this.fss = fss;
-        System.out.println(solve(t,0,n+1));
-        
     }
-    
-    private int solve (int f0, int from, int to) {
+
+    private int solve(int f0, int from, int to) {
         FS fsf = this.fss[from];
         FS fst = this.fss[to];
-        int need = fst.d-fsf.d;
-        if(need <= f0) {
+        int need = fst.d - fsf.d;
+        if (need <= f0) {
             return 0x00;
         } else {
-            FS fsc = cheapest(from,to);
+            FS fsc = cheapest(from, to);
             int idx = this.index;
-            need = Math.min(fsf.d-fsc.d,this.full);
-            int c = need*fsc.c;
-            c += solve(f0,from,index);
-            c += solve(need,from,to);
+            need = Math.min(fsf.d - fsc.d, this.full);
+            int c = need * fsc.c;
+            c += solve(f0, from, index);
+            c += solve(need, from, to);
             return c;
         }
     }
