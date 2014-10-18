@@ -32,7 +32,10 @@ public class Solution {
         int l = sc.nextInt();
         FS[] fss = new FS[n];
         for(int i = 0; i < n; i++) {
-            
+            FS fi = new FS();
+            fi.d = sc.nextInt();
+            fi.c = sc.nextInt();
+            fss[i] = fi;
         }
     }
 
