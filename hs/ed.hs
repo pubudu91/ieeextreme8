@@ -6,12 +6,13 @@ type State = (AVL (Int,Int),Int,AVL (Int,Int))
 --solve [_,m,k] as = solve' k l (drop k l)
 --    where l = (as++take (k-1) as)
 
-initialize :: Int -> [Int] -> State
-initialize k as = 
+--initialize :: Int -> [Int] -> State
+--initialize k as = 
 
-subord :: (Int,Int) -> (Int,Int) -> 
+subord :: (Int,Int) -> (Int,Int) -> Ordering
+subord (a,_) (b,_) = compare a b
 
-insertavl :: AVL (Int,Int) -> 
+--insertavl :: AVL (Int,Int) -> 
 
 --main = do
 --    nmk <- getLine
