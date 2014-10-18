@@ -29,20 +29,21 @@ public class Solution {
         int counter = 0;
         while (sc.hasNextLine()) {
             line = sc.nextLine();
-            System.out.println(line);
-            Matcher m = parser0.matcher(line);
-            m.find();
-            il = m.group(1);
-            if (!il.equals("")) {
-                state.labels.put(il, counter);
+            if (!line.equals("")) {
+                Matcher m = parser0.matcher(line);
+                m.find();
+                il = m.group(1);
+                if (!il.equals("")) {
+                    state.labels.put(il, counter);
+                }
+                Instruction ins = new Instruction();
+                io = m.group(2).toLowerCase();
+                ia = m.group(3).split(",");
+                for (String iai : ia) {
+                    ins.args.add(decodeArgument(iai));
+                }
+                counter++;
             }
-            Instruction ins = new Instruction();
-            io = m.group(2).toLowerCase();
-            ia = m.group(3).split(",");
-            for (String iai : ia) {
-                ins.args.add(decodeArgument(iai));
-            }
-            counter++;
         }
         state.run();
     }
