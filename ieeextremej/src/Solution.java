@@ -111,7 +111,9 @@ public class Solution {
         Or,
         Xor,
         Comp,
-        Jmp
+        Jmp;
+
+        public abstract void run(Instruction instruction, State state);
     }
 
     private class Instruction {
@@ -119,6 +121,10 @@ public class Solution {
         public Opcode op;
         public int cond;
         public ArrayList<Argument> args = new ArrayList<>();
+
+        private void run(State state) {
+            op.run(this,state);
+        }
 
     }
 
