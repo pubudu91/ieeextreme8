@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  */
 public class Solution {
 
-    private class Item {
+    private class Item implements Comparable<Item> {
 
         public String name;
         public int weight;
