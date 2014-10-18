@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -8,19 +9,24 @@ import java.util.regex.Pattern;
  * @author kommusoft
  */
 public class Solution {
-
+    
     private class Item implements Comparable<Item> {
-
+        
         public String name;
         public int weight;
         public int value;
-
+        
+        @Override
+        public int compareTo(Item t) {
+            return ((Integer) (t.value * weight)).compareTo(t.weight * value);
+        }
+        
     }
-
+    
     public static void main(String[] args) {
         new Solution().run();
     }
-
+    
     private void run() {
         Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
@@ -31,7 +37,7 @@ public class Solution {
         ArrayList<Item> itms = new ArrayList<>();
         Pattern p = Pattern.compile("[^,]+");
         Item itm;
-
+        
         while (sc.hasNextLine()) {
             String nm = sc.next(p);
             System.out.println(nm);
@@ -45,6 +51,7 @@ public class Solution {
                 itms.add(itm);
             }
         }
+        Collections.sort(itms);
     }
-
+    
 }
