@@ -126,16 +126,36 @@ public class Solution {
 
     private enum Argdres {
 
-        Adres,
-        Constant,
-        Reference;
+        Adres {
+
+            @Override
+            int fetchMem(int value, State state) {
+                return state.
+            }
+            
+        },
+        Constant {
+
+            @Override
+            int fetchMem(int value, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        },
+        Reference {
+
+            @Override
+            int fetchMem(int value, State state) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         
         private abstract int fetchMem (int value, State state);
     }
 
     private class State {
 
-        public ArrayList<Instruction> memory = new ArrayList<>();
+        public ArrayList<Instruction> instructions = new ArrayList<>();
+        public byte[] memory;
         public int pc = 0;
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
 
