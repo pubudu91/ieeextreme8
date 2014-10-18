@@ -21,8 +21,7 @@ public class Solution {
         int m = sc.nextInt();
         int n = sc.nextInt();
         long s = sc.nextLong();
-        printState(1,s,n);
-        
+        printState(1,s,n); 
     }
     
     private static void printState (int it, long state, int n) {
