@@ -80,12 +80,13 @@ public class Solution {
         }
         Collections.sort(itms);
         int nim = 0x01 << itms.size();
-        for (int i = 0x00; i < nim; i++) {
+        for (int cfg = 0x00; cfg < nim; cfg++) {
             int rem = tot;
             int vl = 0x00;
+            int i = 0;
             for (Item itmi : itms) {
                 int wgh = itmi.weight;
-                int take = rem / wgh;
+                int take = Math.max(0x00,(rem / wgh)-((cfg>>i)&0x01));
                 vl += take*itmi.weight;
                 itmi.take = take;
                 rem -= wgh * take;
