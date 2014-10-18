@@ -20,28 +20,35 @@ public class Solution {
         pq.clear();
         this.visi = new boolean[names.size()];
         expand(pi, da);
-        while(pq.size() > 0x00) {
+        while (pq.size() > 0x00) {
             Traveler t = pq.remove();
-            if(t.pj == target) {
-                
+            if (t.pj == target) {
+                long ar = t.da - 60;
+                System.out.print(ar / 1440);
+                System.out.print(' ');
+                System.out.print(ar % 1440);
                 return;
+            } else {
+                expand(t.pj, t.da);
             }
         }
         System.out.println("No trip on XSL");
-        
+
     }
 
     private void expand(int pi, long da) {
-        Flight flt = new Flight(da);
-        int p = visi.length;
-        TreeSet<Flight>[] fli = fls[pi];
-        boolean[] visi = this.visi;
-        visi[pi] = true;
-        for (int pj = 0; pj < p; pj++) {
-            if (!visi[pj]) {
-                TreeSet<Flight> flij = fli[pj];
-                Flight flu = flij.ceiling(flt);
-                pq.add(new Traveler(pj, flu.to + 60));
+        if (!visi[pi]) {
+            Flight flt = new Flight(da);
+            int p = visi.length;
+            TreeSet<Flight>[] fli = fls[pi];
+            boolean[] visi = this.visi;
+            visi[pi] = true;
+            for (int pj = 0; pj < p; pj++) {
+                if (!visi[pj]) {
+                    TreeSet<Flight> flij = fli[pj];
+                    Flight flu = flij.ceiling(flt);
+                    pq.add(new Traveler(pj, flu.to + 60));
+                }
             }
         }
     }
