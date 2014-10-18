@@ -37,7 +37,7 @@ public class Solution {
             System.out.print(Long.toBinaryString((s>>m)&0x07));
             System.out.print("->");
             res |= ((r>>((s>>m)&0x07))&0x01)<<(m+0x01);
-            System.out.print(Long.toBinaryString(((r>>((s>>m)&0x07))&0x01)));
+            System.out.println(Long.toBinaryString(((r>>((s>>m)&0x07))&0x01)));
         }
         res |= ((r>>((s<<0x01)&0x07))&0x01);
         return res;
