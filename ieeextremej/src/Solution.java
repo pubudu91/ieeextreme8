@@ -123,7 +123,7 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         byte a = state.load(instruction.args.get(0));
                         byte b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1),(byte) (a+b));
+                        state.store(instruction.args.get(1),(byte) (b+a));
                     }
                 },
         Sub {
@@ -132,35 +132,43 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         byte a = state.load(instruction.args.get(0));
                         byte b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1),(byte) (a+b));
+                        state.store(instruction.args.get(1),(byte) (b+a));
                     }
                 },
         And {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        byte a = state.load(instruction.args.get(0));
+                        byte b = state.load(instruction.args.get(1));
+                        state.store(instruction.args.get(1),(byte) (b&a));
                     }
                 },
         Or {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        byte a = state.load(instruction.args.get(0));
+                        byte b = state.load(instruction.args.get(1));
+                        state.store(instruction.args.get(1),(byte) (b|a));
                     }
                 },
         Xor {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        byte a = state.load(instruction.args.get(0));
+                        byte b = state.load(instruction.args.get(1));
+                        state.store(instruction.args.get(1),(byte) (b^a));
                     }
                 },
         Comp {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        byte a = state.load(instruction.args.get(0));
+                        byte b = state.load(instruction.args.get(1));
+                        state.store(instruction.args.get(1),(byte) (b+a));
                     }
                 },
         Jmp {
