@@ -185,7 +185,9 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        if((instruction.cond&state.cmp) != 0x00) {
+                            state.jmp(instruction.args.get(0).label);
+                        }
                     }
                 };
 
@@ -208,6 +210,7 @@ public class Solution {
 
         public Argdres meth = Argdres.Adres;
         public byte addr;
+        public String label;
 
         private void store(State state, byte val) {
             state.memory[meth.fetchAdress(this.addr, state)] = val;
