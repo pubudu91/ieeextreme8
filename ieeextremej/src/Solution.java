@@ -7,6 +7,13 @@ import java.util.Scanner;
  * @author kommusoft
  */
 public class Solution {
+    
+    private class Item {
+        
+        String name;
+        
+        
+    }
 
     public static void main(String[] args) {
         new Solution().run();
@@ -23,6 +30,7 @@ public class Solution {
             if(sc.equals("END")) {
                 break;
             }
+            sc.nextLine();
         }
     }
 
