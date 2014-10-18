@@ -1,0 +1,1 @@
+sumitup :: [Int] -> [Int]
