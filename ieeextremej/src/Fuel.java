@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  * @author kommusoft
  */
-public class Solution {
+public class Fuel {
 
     public int full;
     public FS[] fss;
@@ -25,7 +25,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        new Solution().run();
+        new Fuel().run();
     }
 
     private void run() {
