@@ -31,13 +31,12 @@ public class Solution {
             line = sc.nextLine();
             if (!line.equals("")) {
                 Matcher m = parser0.matcher(line);
-                System.out.println(m.find());
+                m.find();
                 il = m.group(1);
                 if (il != null) {
                     state.labels.put(il, counter);
                 }
                 Instruction ins = new Instruction();
-                System.out.println(m);
                 io = m.group(2).toLowerCase();
                 ins.op = decodeIns(io,ins);
                 ia = m.group(3).split(",");
@@ -50,12 +49,10 @@ public class Solution {
                 break;
             }
         }
-        System.out.println("Run");
         state.run();
     }
 
     public Opcode decodeIns(String io, Instruction ins) {
-        System.out.println("\""+io+"\"");
         switch (io) {
             case "print":
                 return Opcode.Print;
@@ -307,7 +304,6 @@ public class Solution {
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
 
         private void run() {
-            System.out.println("Whee");
             while (pc < instructions.size()) {
                 Instruction ins = instructions.get(pc++);
                 System.out.println(ins.op);
