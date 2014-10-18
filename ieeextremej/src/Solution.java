@@ -32,7 +32,7 @@ public class Solution {
     }
     
     private long next (long s) {
-        long res = 0x00;
+        long res = 0x00l;
         for(int m = this.n-0x02; m >= 0x00; m--) {
             res |= ((r>>((s>>m)&0x07))&0x01)<<(m+0x01);
         }
