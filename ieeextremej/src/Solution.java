@@ -65,7 +65,7 @@ public class Solution {
         if (need <= f0) {
             return 0x00;
         } else {
-            FS fsc = cheapest(from, to);
+            FS fsc = cheapest(from+0x01, to);
             int idx = this.index;
             int dist = fst.d - fsc.d;
             int hleft = f0 - fsc.d;
@@ -77,7 +77,7 @@ public class Solution {
                 c += solve(f0, from, idx);
             }
             if (dist > need) {
-                c += solve(need, idx+0x01, to);
+                c += solve(need, idx, to);
             }
             return c;
         }
