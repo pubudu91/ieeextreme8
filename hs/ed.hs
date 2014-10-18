@@ -1,5 +1,5 @@
 solve [Int] -> [Int] -> Int
-solve ()
+solve [n,m,k] 
 
 main = do
     nmk <- getLine
