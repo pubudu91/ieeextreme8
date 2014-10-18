@@ -67,12 +67,14 @@ public class Solution {
         } else {
             FS fsc = cheapest(from, to);
             int idx = this.index;
-            int dist = fst.d-fsc.d;
-            int left = Math.max(0,f0-fsc.d);
-            need = Math.min(dist-left, this.full);
+            int dist = fst.d - fsc.d;
+            int left = Math.max(0, f0 - fsc.d);
+            need = Math.min(dist - left, this.full);
             int c = need * fsc.c;
             c += solve(f0, from, index);
-            c += solve(need, from, to);
+            if (dist - left > need) {
+                c += solve(need, from, to);
+            }
             return c;
         }
     }
