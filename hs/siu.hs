@@ -1,5 +1,5 @@
 siu :: [Int] -> Int -> Int
-siu as n = powm n (foldl summ 0 as)
+siu as n = mod ((powm n 2) * (foldl summ 0 as)) 1000000007
 
 summ :: Int -> Int -> Int
 summ a b = mod (a+b) 1000000007
