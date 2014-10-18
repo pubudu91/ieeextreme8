@@ -83,6 +83,7 @@ public class Solution {
         int cfgv = 0x00;
         int cfgm = 0x00;
         for (int cfg = 0x00; cfg < nim; cfg++) {
+            System.out.println("cfg"+cfg);
             int vl = calc(itms, tot, cfg);
             if(vl > cfgv) {
                 cfgv = vl;
