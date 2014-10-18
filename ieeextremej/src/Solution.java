@@ -29,7 +29,7 @@ public class Solution {
         int k = 0x00;
         ArrayList<Integer> err = new ArrayList<Integer>();
         for(int i1 = 0x00; i1 < r-0x01; i1++) {
-            
+            int res = (rs[i1]^rs[i1+0x01])&(~(rs[i1+0x01]^rs[r-0x01]));
         }
     }
     
