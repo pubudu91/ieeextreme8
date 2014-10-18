@@ -11,8 +11,9 @@ vferats a b = cc == c*c
 
 solve'' :: Int -> Int -> Bool
 solve'' a b | a < b = solve'' b a
-solve'' a b | otherwise = a == f*b && (any (vferats (f*b)) (ferats a))
+solve'' a b | otherwise = a == fb && (any (vferats (f*b)) (ferats a))
     where f = (div a b)
+          fb = f*b
 
 solve :: [String] -> String
 solve = solve' . map (read)
