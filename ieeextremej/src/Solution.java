@@ -114,7 +114,7 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        state.Store(instruction.args.get(1),instruction.args.get(0));
                     }
                 },
         Add {
