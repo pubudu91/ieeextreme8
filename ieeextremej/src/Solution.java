@@ -18,7 +18,7 @@ public class Solution {
 
     private void run() {
         Scanner sc = new Scanner(System.in);
-        int mem = sc.nextInt();//set memory size
+        int mem = sc.nextInt(16);//set memory size
         sc.nextLine();
         String line;
         String il;
