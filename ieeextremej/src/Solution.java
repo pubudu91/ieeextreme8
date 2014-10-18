@@ -100,10 +100,10 @@ public class Solution {
             arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01), 16)&0xff;
         } else if (ia.startsWith("#")) {
             arg.meth = Argdres.Constant;
-            arg.addr = (byte) Integer.parseInt(ia.substring(0x01), 16);
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01), 16)&0xff;
         } else {
             try {
-                arg.addr = (byte) Integer.parseInt(ia, 16);
+                arg.addr = (byte) Integer.parseInt(ia, 16)&0xff;
             } catch (Exception e) {
             }
         }
@@ -254,12 +254,12 @@ public class Solution {
         Adres {
 
                     @Override
-                    public int fetchMem(byte value, State state) {
+                    public int fetchMem(int value, State state) {
                         return state.memory[value];
                     }
 
                     @Override
-                    public int fetchAdress(byte value, State state) {
+                    public int fetchAdress(int value, State state) {
                         return value;
                     }
 
@@ -267,24 +267,24 @@ public class Solution {
         Constant {
 
                     @Override
-                    public int fetchMem(byte value, State state) {
+                    public int fetchMem(int value, State state) {
                         return value;
                     }
 
                     @Override
-                    public int fetchAdress(byte value, State state) {
+                    public int fetchAdress(int value, State state) {
                         return -0x01;
                     }
                 },
         Reference {
 
                     @Override
-                    public int fetchMem(byte value, State state) {
+                    public int fetchMem(int value, State state) {
                         return state.memory[state.memory[value]];
                     }
 
                     @Override
-                    public int fetchAdress(byte value, State state) {
+                    public int fetchAdress(int value, State state) {
                         return state.memory[value];
                     }
                 };
