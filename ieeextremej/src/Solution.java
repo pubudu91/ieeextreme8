@@ -40,7 +40,7 @@ public class Solution {
             FS fi;
             fi = new FS();
             fi.d = 0;
-            fi.c = Integer.MAX_VALUE;
+            fi.c = 0;
             fss[0] = fi;
             int k = 1;
             for (int i = 1; i <= n; i++) {
@@ -53,7 +53,7 @@ public class Solution {
             }
             fi = new FS();
             fi.d = l;
-            fi.c = Integer.MAX_VALUE;
+            fi.c = 0;
             fss[k] = fi;
             Arrays.sort(fss);
             this.fss = fss;
