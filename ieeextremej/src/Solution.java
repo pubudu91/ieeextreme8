@@ -108,9 +108,10 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        int b = instruction.args.get(0).addr();
+                        int b = instruction.args.get(0).address(state);
+                        int e = b;
                         if (instruction.args.size() > 1) {
-                            byte e = state.load(instruction.args.get(1));
+                            e = instruction.args.get(1).address(state);
                         }
                         return String.format("0x%8s", Integer.toHexString(n)).replace(' ', '0');
                     }
@@ -217,7 +218,7 @@ public class Solution {
         public byte addr;
         public String label;
 
-        public int addr (State state) {
+        public int address (State state) {
             return meth.fetchAdress(this.addr, state);
         }
         
