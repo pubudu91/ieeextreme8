@@ -248,16 +248,12 @@ public class Solution {
             }
         }
         
-        public void Load (Argument arg) {
-            
+        public byte Load (Argument arg) {
+            arg.load(this);
         }
         
         public void Store (Argument arg) {
-            
-        }
-        
-        public void Load (Argument arg) {
-            
+            arg.store(this);
         }
 
     }
