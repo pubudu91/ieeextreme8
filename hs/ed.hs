@@ -1,4 +1,6 @@
-type State = (Heap Int Int,Int,Heap Int Int)
+import Data.Tree
+
+type State = (AVL Int,Int,AVL Int)
 
 solve :: [Int] -> [Int] -> Int
 solve [_,m,k] as = solve' k l (drop k l)
