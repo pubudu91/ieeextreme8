@@ -187,11 +187,11 @@ public class Solution {
         public Argdres meth = Argdres.Adres;
         public int val;
 
-        private void store(State state) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        private void store(State state, byte val) {
+            meth.fetchAdress(val, state);
         }
 
-        private void load(State state) {
+        private byte load(State state) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
@@ -257,7 +257,7 @@ public class Solution {
         }
         
         public byte Load (Argument arg) {
-            arg.load(this);
+            return arg.load(this);
         }
         
         public void Store (Argument arg) {
