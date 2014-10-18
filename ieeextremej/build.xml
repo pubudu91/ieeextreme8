@@ -58,8 +58,8 @@
 
     An example of overriding the target for project execution could look like this:
 
-        <target name="run" depends="${work.dir}" ececutable="java" input="/home/kommusoft/Projects/ieeextreme8/ieeextremej/asm.in">
-            <exec dir="bin" executable="launcher.exe">
+        <target name="run" depends="ieeextremej-impl.jar">
+            <exec dir="${work.dir}" executable="java" input="/home/kommusoft/Projects/ieeextreme8/ieeextremej/asm.in">
                 <arg file="${dist.jar}"/>
             </exec>
         </target>
