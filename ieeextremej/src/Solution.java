@@ -117,10 +117,12 @@ public class Solution {
                         if (instruction.args.size() > 1) {
                             e = instruction.args.get(1).address(state);
                         }
-                        for() {
-                            
+                        printHex(state.memory[b++]);
+                        for(; b < e; b++) {
+                            System.out.print(' ');
+                            printHex(state.memory[b]);
                         }
-                        
+                        System.out.println();
                     }
                 },
         Move {
