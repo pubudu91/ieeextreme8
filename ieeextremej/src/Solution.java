@@ -67,7 +67,7 @@ public class Solution {
         } else {
             FS fsc = cheapest(from + 0x01, to);
             if (fsc == null) {
-                throw new IllegalStateException();
+                throw new Exception();
             }
             int idx = this.index;
             int dist = fst.d - fsc.d;
