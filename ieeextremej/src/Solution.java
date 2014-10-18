@@ -114,21 +114,25 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        state.Store(instruction.args.get(1),state.Load(instruction.args.get(0)));
+                        state.store(instruction.args.get(1),state.load(instruction.args.get(0)));
                     }
                 },
         Add {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        byte a = state.load(instruction.args.get(0));
+                        byte b = state.load(instruction.args.get(1));
+                        state.store(instruction.args.get(1),(byte) (a+b));
                     }
                 },
         Sub {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        byte a = state.load(instruction.args.get(0));
+                        byte b = state.load(instruction.args.get(1));
+                        state.store(instruction.args.get(1),(byte) (a+b));
                     }
                 },
         And {
@@ -256,11 +260,11 @@ public class Solution {
             }
         }
 
-        public byte Load(Argument arg) {
+        public byte load(Argument arg) {
             return arg.load(this);
         }
 
-        public void Store(Argument arg, byte val) {
+        public void store(Argument arg, byte val) {
             arg.store(this, val);
         }
 
