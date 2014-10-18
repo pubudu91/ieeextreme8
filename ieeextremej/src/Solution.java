@@ -92,17 +92,20 @@ public class Solution {
         arg.label = ia;
         if (ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
-            arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01),16);
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01), 16);
         } else if (ia.startsWith("#")) {
             arg.meth = Argdres.Constant;
-            arg.addr = (byte) Integer.parseInt(ia.substring(0x01),16);
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01), 16);
         } else {
-            arg.addr = (byte) Integer.parseInt(ia,16);
+            try {
+                arg.addr = (byte) Integer.parseInt(ia, 16);
+            } catch (Exception e) {
+            }
         }
         return arg;
     }
-    
-    public static void printHex (byte val) {
+
+    public static void printHex(byte val) {
         System.out.print(String.format("0x%2s", Integer.toHexString(val)).replace(' ', '0'));
     }
 
@@ -118,7 +121,7 @@ public class Solution {
                             e = instruction.args.get(1).address(state);
                         }
                         printHex(state.memory[b++]);
-                        for(; b < e; b++) {
+                        for (; b < e; b++) {
                             System.out.print(' ');
                             printHex(state.memory[b]);
                         }
@@ -227,10 +230,10 @@ public class Solution {
         public byte addr;
         public String label;
 
-        public int address (State state) {
+        public int address(State state) {
             return meth.fetchAdress(this.addr, state);
         }
-        
+
         private void store(State state, byte val) {
             state.memory[meth.fetchAdress(this.addr, state)] = val;
         }
