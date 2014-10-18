@@ -30,7 +30,7 @@ public class Solution {
         for(int pj = 0; pj < p; pj++) {
             if(!visi[pj]) {
                 TreeSet<Flight> flij = fli[pj];
-                flij.ceiling(null);
+                flij.ceiling(flt);
             }
         }
     }
