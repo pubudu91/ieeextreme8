@@ -52,6 +52,7 @@ public class Solution {
             return 0x00;
         } else {
             FS fsc = cheapest(from,to);
+            need = fsf.d-fsc.d;
         }
     }
 
