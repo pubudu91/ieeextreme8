@@ -57,7 +57,7 @@ public class Solution {
         int k = sc.nextInt();
         int tot = r * k;
         sc.nextLine();
-        sc.useDelimiter("[\n\t\r,]+");
+        sc.useDelimiter("[\n\t\r, ]+");
         ArrayList<Item> itms = new ArrayList<>();
         Pattern p = Pattern.compile("[^,\n\t\r ]+");
         Item itm;
