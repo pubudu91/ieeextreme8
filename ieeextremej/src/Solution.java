@@ -42,20 +42,23 @@ public class Solution {
             fi.d = 0;
             fi.c = Integer.MAX_VALUE;
             fss[0] = fi;
+            int k = 1;
             for (int i = 1; i <= n; i++) {
                 fi = new FS();
                 fi.d = sc.nextInt();
-                fi.c = sc.nextInt();
-                fss[i] = fi;
+                if (fi.d < l) {
+                    fi.c = sc.nextInt();
+                    fss[k++] = fi;
+                }
             }
             fi = new FS();
             fi.d = l;
             fi.c = Integer.MAX_VALUE;
-            fss[n + 0x01] = fi;
+            fss[k] = fi;
             Arrays.sort(fss);
             this.fss = fss;
             try {
-                System.out.println(solve(t, 0, n + 1));
+                System.out.println(solve(t, 0, k));
             } catch (Exception e) {
                 System.out.println(-1);
             }
@@ -80,7 +83,7 @@ public class Solution {
             int left = Math.max(0, hleft);
             need = Math.min(dist, this.full);
             int c = (need - left) * fsc.c;
-            System.out.println("" + (need - left) + "x" + fsc.c + "=" + c);
+            //System.out.println("" + (need - left) + "x" + fsc.c + "=" + c);
             if (hleft < left) {
                 c += solve(f0, from, idx);
             }
@@ -98,7 +101,7 @@ public class Solution {
         to = Math.min(fss.length - 0x01, to);
         FS fi;
         int mini = -1;
-        for (int i = from+0x01; i < to; i++) {
+        for (int i = from + 0x01; i < to; i++) {
             fi = fss[i];
             if (fi.c < c) {
                 c = fi.c;
