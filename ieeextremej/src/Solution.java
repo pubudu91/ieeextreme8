@@ -10,6 +10,7 @@ public class Solution {
 
     public int full;
     public FS[] fss;
+    public int index;
 
     private class FS implements Comparable<FS> {
 
@@ -54,7 +55,8 @@ public class Solution {
         } else {
             FS fsc = cheapest(from,to);
             need = Math.min(fsf.d-fsc.d,this.full);
-            int c = fsc.d*
+            int c = need*fsc.c;
+            solve(f0,from,);
         }
     }
 
