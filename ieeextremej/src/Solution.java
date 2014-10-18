@@ -74,10 +74,10 @@ public class Solution {
             int c = (need-left) * fsc.c;
             System.out.println(""+need+"x"+fsc.c);
             if (hleft < left) {
-                c += solve(f0, from, index);
+                c += solve(f0, from, idx);
             }
             if (dist - left > need) {
-                c += solve(need, from, to);
+                c += solve(need, idx+0x01, to);
             }
             return c;
         }
