@@ -16,6 +16,14 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
         int k = sc.nextInt();
+        int tot = r*k;
+        sc.nextLine();
+        while(sc.hasNextLine()) {
+            sc.next("\\w+");
+            if(sc.equals("END")) {
+                break;
+            }
+        }
     }
 
 }
