@@ -25,6 +25,11 @@ public class Solution {
         for(int i = 0; i < r; i++) {
             rs[i] = Integer.parseInt(sc.nextLine().replaceAll(" ",""),0x02);
         }
+        int k = 0x00;
+        ArrayList<Integer> err = new ArrayList<Integer>();
+        for(int i1 = 0x00; i < ) {
+            
+        }
     }
     
 }
