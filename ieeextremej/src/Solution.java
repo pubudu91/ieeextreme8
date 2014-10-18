@@ -112,7 +112,7 @@ public class Solution {
     }
 
     public static void printHex(byte val) {
-        System.out.print(String.format("%2s", Integer.toHexString(val)).replace(' ', '0'));
+        System.out.print(String.format("%02X",val).replace(' ', '0'));
     }
 
     public enum Opcode {
@@ -306,7 +306,6 @@ public class Solution {
         private void run() {
             while (pc < instructions.size()) {
                 Instruction ins = instructions.get(pc++);
-                System.out.println(ins.op);
                 ins.run(this);
             }
         }
