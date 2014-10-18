@@ -54,11 +54,16 @@ public class Solution {
             fss[n + 0x01] = fi;
             Arrays.sort(fss);
             this.fss = fss;
-            System.out.println(solve(t, 0, n + 1));
+            try {
+                System.out.println(solve(t, 0, n + 1));
+            } catch (Exception e) {
+                System.out.println(-1);
+            }
+
         }
     }
 
-    private int solve(int f0, int from, int to) {
+    private int solve(int f0, int from, int to) throws Exception {
         FS fsf = this.fss[from];
         FS fst = this.fss[to];
         int need = fst.d - fsf.d;
