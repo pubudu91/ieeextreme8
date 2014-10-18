@@ -1,5 +1,5 @@
 siu :: [Int] -> Int -> Integer
-siu as n = powm n (foldl summ 0 as)))
+siu as n = powm n (foldl summ 0 as)
 
 summ :: Int -> Int -> Int
 summ a b = mod (a+b) 1000000007
@@ -18,3 +18,5 @@ solve = siu . map (read)
 main = do
     a <- getLine
     b <- getLine
+    c <- getLine
+    print siu (map (read) . words b) (read c)
