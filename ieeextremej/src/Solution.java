@@ -37,7 +37,7 @@ public class Solution {
 
         @Override
         public String toString() {
-            return String.format("%s,%s,%s,%s,%s",this.name,this.take,this.take*this.weight,this.take*this.value,this.load());
+            return String.format("%s,%s,%s,%s",this.name,this.take,this.take*this.weight,this.take*this.value);
         }
         
     }
