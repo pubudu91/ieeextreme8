@@ -6,6 +6,7 @@ import java.util.Scanner;
  * @author kommusoft
  */
 public class Solution {
+    
 
     /**
      * @param args the command line arguments
@@ -16,9 +17,9 @@ public class Solution {
 
     private void run() {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int r = sc.nextInt();
         int m = sc.nextInt();
-        int k = sc.nextInt();
+        int n = sc.nextInt();
     }
 
 }
