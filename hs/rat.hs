@@ -9,7 +9,8 @@ vferats a b = cc == c*c
           c = floor ( sqrt ( fromIntegral cc))
 
 solve'' :: Int -> Int -> Bool
-solve'' a b = any (vferats b) (ferats a)
+solve'' a b | a > b = solve'' b a
+solve'' a b | otherwise = (div b a)*a == b && (any (vferats b) (ferats a))
 
 solve :: [String] -> String
 solve = solve' . map (read)
