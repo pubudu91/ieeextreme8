@@ -45,7 +45,8 @@ public class Solution {
     }
     
     private int solve (int f0, int from, int to) {
-        
+        FS fsf = this.fss[from];
+        FS fst = this.fss[to];
     }
 
     public FS cheapest(int from, int to) {
