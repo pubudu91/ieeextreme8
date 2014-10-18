@@ -97,7 +97,7 @@ public class Solution {
         arg.label = ia.trim();
         if (ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
-            arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01), 16);
+            arg.addr = (byte) Integer.parseInt(ia.substring(0x01, ia.length() - 0x01), 16)&0xff;
         } else if (ia.startsWith("#")) {
             arg.meth = Argdres.Constant;
             arg.addr = (byte) Integer.parseInt(ia.substring(0x01), 16);
@@ -232,7 +232,7 @@ public class Solution {
     private class Argument {
 
         public Argdres meth = Argdres.Adres;
-        public byte addr;
+        public int addr;
         public String label;
 
         public int address(State state) {
@@ -289,9 +289,9 @@ public class Solution {
                     }
                 };
 
-        public abstract int fetchMem(byte value, State state);
+        public abstract int fetchMem(int value, State state);
 
-        public abstract int fetchAdress(byte value, State state);
+        public abstract int fetchAdress(int value, State state);
     }
 
     private class State {
