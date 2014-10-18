@@ -16,18 +16,18 @@ public class Solution {
     }
 
     private void run() {
-        /*Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
         int m = sc.nextInt();
         int n = sc.nextInt();
-        long s = sc.nextLong();*/
-        printState(16,8);
+        long s = sc.nextLong();
+        printState(s,n);
         
     }
     
-    private static void printState (long state, int n) {
+    private static void printState (int it, long state, int n) {
         System.out.print('-');
-        for(long mask = 0x1l<<(n-0x01); mask != 0x00; mask >>= 0x00) {
+        for(long mask = 0x1l<<(n-0x01); mask != 0x00; mask >>= 0x01) {
             if((state&mask) != 0x00) {
                 System.out.print('*');
             } else {
