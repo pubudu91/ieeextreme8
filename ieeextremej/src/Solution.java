@@ -15,6 +15,7 @@ public class Solution {
         public String name;
         public int weight;
         public int value;
+        public int take;
         
         @Override
         public int compareTo(Item t) {
@@ -52,6 +53,10 @@ public class Solution {
             }
         }
         Collections.sort(itms);
+        int rem = tot;
+        for(Item itmi : itms) {
+            
+        }
     }
     
 }
