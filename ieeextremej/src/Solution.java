@@ -76,7 +76,7 @@ public class Solution {
             if (hleft < left) {
                 c += solve(f0, from, idx);
             }
-            if (dist - left > need) {
+            if (dist > need) {
                 c += solve(need, idx+0x01, to);
             }
             return c;
