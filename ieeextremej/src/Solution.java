@@ -187,6 +187,14 @@ public class Solution {
         public Argdres meth = Argdres.Adres;
         public int val;
 
+        private void store(State state) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void load(State state) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
     }
 
     private enum Argdres {
