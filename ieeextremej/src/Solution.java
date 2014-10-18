@@ -22,6 +22,14 @@ public class Solution {
         public int compareTo(Item t) {
             return ((Integer) (t.value * weight)).compareTo(t.weight * value);
         }
+        
+        public int totalW () {
+            return this.take*this.weight;
+        }
+        
+        public int totalV () {
+            return this.take*this.value;
+        }
 
         @Override
         public String toString() {
@@ -76,6 +84,9 @@ public class Solution {
             rem -= wgh*take;
         }
         Collections.sort(itms,new Sorter());
+        for(Item itmi : itms) {
+            
+        }
     }
     
 }
