@@ -17,6 +17,7 @@ public class Solution {
     private PriorityQueue<Traveler> pq = new PriorityQueue<>();
 
     private void query(int pi, long da, int pj) {
+        pq.clear();
         this.visi = new boolean[names.size()];
         expand(pi, da);
     }
@@ -27,33 +28,39 @@ public class Solution {
         TreeSet<Flight>[] fli = fls[pi];
         boolean[] visi = this.visi;
         visi[pi] = true;
-        for(int pj = 0; pj < p; pj++) {
-            if(!visi[pj]) {
+        for (int pj = 0; pj < p; pj++) {
+            if (!visi[pj]) {
                 TreeSet<Flight> flij = fli[pj];
                 flij.ceiling(flt);
+                pq.add(new Traveler());
             }
         }
     }
-    
+
     private class Traveler implements Comparable<Traveler> {
-        
+
         public int pj;
         public long da;
-        
-        public Traveler (int pj, long da) {
+
+        public Traveler(int pj, long da) {
             this.pj = pj;
             this.da = da;
         }
-        
+
+        @Override
+        public int compareTo(Traveler t) {
+            return ((Long) da).compareTo(t.da);
+        }
+
     }
 
     private class Flight implements Comparable<Flight> {
 
         public long from;
         public long to;
-        
+
         public Flight(long from) {
-            this(from,0x00);
+            this(from, 0x00);
         }
 
         public Flight(long from, long to) {
