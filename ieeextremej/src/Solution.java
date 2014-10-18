@@ -43,6 +43,8 @@ public class Solution {
                     ins.args.add(decodeArgument(iai));
                 }
                 counter++;
+            } else {
+                break;
             }
         }
         System.out.println("Run");
