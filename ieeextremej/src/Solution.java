@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -20,6 +21,15 @@ public class Solution {
         @Override
         public int compareTo(Item t) {
             return ((Integer) (t.value * weight)).compareTo(t.weight * value);
+        }
+        
+    }
+    
+    private class Sorter implements Comparator<Item> {
+
+        @Override
+        public int compare(Item t, Item t1) {
+            return t.name.compareTo(t1.name);
         }
         
     }
@@ -60,6 +70,7 @@ public class Solution {
             itmi.take = take;
             rem -= wgh*take;
         }
+        Collections.sort(itms,new Sorter());
     }
     
 }
