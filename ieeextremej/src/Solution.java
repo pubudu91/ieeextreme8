@@ -172,8 +172,8 @@ public class Solution {
                     if (fli.dominates(alt)) {
                         tij.remove(alt);
                         rem = true;
-                    } else {
-
+                    } else if(alt.dominates(fli)) {
+                        fli = null;
                     }
                 }
             } while (rem);
