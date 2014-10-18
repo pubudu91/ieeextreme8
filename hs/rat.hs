@@ -5,8 +5,8 @@ import Data.List
 ferats a = [b|b<-[1..(a-1)],let cc = a*a-b*b, cc > 0, let c = floor ( sqrt ( fromIntegral cc)), b*b<=cc,cc == c*c]
 
 vferats :: Int -> Int -> Int -> Bool
-vferats a b d = cc == c*c
-    where e = a*d/
+vferats a b d = e*b == a*d && cc == c*c
+    where e = div (a*d) b
           cc = a*a-(d)*d
           c = floor ( sqrt ( fromIntegral cc))
 
