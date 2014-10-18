@@ -30,9 +30,10 @@ public class Solution {
     private long next (long r) {
         long res = 0x00;
         for(int m = this.n-0x02; m >= 0x00; m--) {
-            res |= (r>>((r>>m)&0x07))<<(m+0x01);
+            res |= ((r>>((r>>m)&0x07))&0x01)<<(m+0x01);
         }
-        res |= (r>>((r<<0x01)&0x07))<<(m+0x01);
+        res |= ((r>>((r<<0x01)&0x07))&0x01);
+        return res;
     }
     
     private void printState (int it, long state, int n) {
