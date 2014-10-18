@@ -10,7 +10,9 @@ public class Solution {
     
     private class Item {
         
-        String name;
+        public String name;
+        public int weight;
+        public int value;
         
         
     }
