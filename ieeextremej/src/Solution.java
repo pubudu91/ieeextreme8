@@ -168,7 +168,7 @@ public class Solution {
             do {
                 rem = false;
                 Flight alt = tij.floor(fli);
-                if(fli.dominates(alt)) {
+                if(alt != null && fli.dominates(alt)) {
                     tij.remove(alt);
                     rem = true;
                 }
