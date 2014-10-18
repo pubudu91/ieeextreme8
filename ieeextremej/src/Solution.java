@@ -1,54 +1,114 @@
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
+import java.util.TreeSet;
+import java.util.regex.Pattern;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author kommusoft
  */
 public class Solution {
 
+    private HashMap<String, Integer> names;
+    private TreeSet<Flight>[][] fls;
+    //private ;
+
+    private void query(int pi, long da, int pj) {
+        boolean[] visi = new boolean[names.size()];
+        //expand();
+    }
+
+    private class Flight implements Comparable<Flight> {
+
+        public long from;
+        public long to;
+
+        public Flight(long from, long to) {
+            this.from = from;
+            this.to = to;
+        }
+
+        public boolean dominates(Flight f) {
+            return f.from <= this.from && f.to >= this.to;
+        }
+
+        @Override
+        public int compareTo(Flight t) {
+            return ((Long) this.from).compareTo(t.from);
+        }
+
+        @Override
+        public int hashCode() {
+            int hash = 3;
+            hash = 29 * hash + (int) (this.from ^ (this.from >>> 32));
+            hash = 29 * hash + (int) (this.to ^ (this.to >>> 32));
+            return hash;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final Flight other = (Flight) obj;
+            if (this.from != other.from) {
+                return false;
+            }
+            if (this.to != other.to) {
+                return false;
+            }
+            return true;
+        }
+
+    }
+
     public static void main(String[] args) {
         new Solution().run();
     }
 
     private void run() {
+        Pattern pat = Pattern.compile("[^ \r\n\t,]+");
         Scanner sc = new Scanner(System.in);
-        int r = sc.nextInt();
-        int c = sc.nextInt();
+        int p = sc.nextInt();
+        int f = sc.nextInt();
+        int q = sc.nextInt();
         sc.nextLine();
-        int[] rs = new int[r];
-        for (int i = 0; i < r; i++) {
-            rs[i] = Integer.parseInt(sc.nextLine().replaceAll(" ", ""), 0x02);
+        HashMap<String, Integer> hm = new HashMap<>();
+        for (int pi = 0x00; pi < p; pi++) {
+            hm.put(sc.nextLine(), pi);
         }
-        int k = 0x00;
-        ArrayList<Integer> err1 = new ArrayList<Integer>();
-        for (int i1 = 0x00; i1 < r - 0x01; i1++) {
-            int res = (rs[i1] ^ rs[i1 + 0x01]) & (~(rs[i1 + 0x01] ^ rs[r - 0x01]));
-            if (res == 0x00) {
-                err1.add(i1);
+        TreeSet<Flight>[][] fls = (TreeSet<Flight>[][]) new TreeSet[p][p];
+        for (int pi = 0x00; pi < p; pi++) {
+            for (int pj = 0x00; pj < p; pj++) {
+                fls[pi][pj] = new TreeSet<Flight>();
             }
         }
-        ArrayList<Integer> err2 = new ArrayList<Integer>();
-        for (int i1 = 0x00; i1 < r - 0x02; i1++) {
-            for (int i2 = i1+0x01; i2 < r - 0x01; i2++) {
-                int res = (rs[i1] ^ rs[i1 + 0x01]) & (~(rs[i1 + 0x01] ^ rs[i2])) & (~(rs[i2] ^ rs[i2 + 0x01]));
-                if (res == 0x00) {
-                    err2.add((i1<<0x10)+i2);
-                }
-            }
+        this.names = hm;
+        sc.useDelimiter("[\n\t\r, ]+");
+        for (int fi = 0x00; fi < f; fi++) {
+            int pi = hm.get(sc.next());
+            long da = sc.nextInt();
+            da <<= 0x20;
+            da |= sc.nextInt();
+            int pj = hm.get(sc.next());
+            long db = sc.nextInt();
+            db <<= 0x20;
+            db |= sc.nextInt();
+            Flight fli = new Flight(da, db);
+            fls[pi][pj].add(fli);
         }
-        System.out.println(err1.size()+err2.size());
-        for(Integer e : err1) {
-            System.out.println("i_1="+(e+0x01));
-        }
-        for(Integer e : err2) {
-            System.out.println("i1="+((e>>0x10)+0x01)+" i2="+((e & 0xff)+0x01));
+        this.fls = fls;
+        for (int qi = 0x00; qi < q; qi++) {
+            int pi = hm.get(sc.next());
+            long da = sc.nextInt();
+            da <<= 0x20;
+            da |= sc.nextInt();
+            int pj = hm.get(sc.next());
+            query(pi, da, pj);
         }
     }
 
