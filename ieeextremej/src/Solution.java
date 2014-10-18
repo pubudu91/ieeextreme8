@@ -35,12 +35,21 @@ public class Solution {
         int t = sc.nextInt();
         int l = sc.nextInt();
         FS[] fss = new FS[n+0x02];
-        for (int i = 0; i < n; i++) {
-            FS fi = new FS();
+        FS fi;
+        fi = new FS();
+        fi.d = 0;
+        fi.c = Integer.MAX_VALUE;
+        fss[0] = fi;
+        for (int i = 1; i < n; i++) {
+            fi = new FS();
             fi.d = sc.nextInt();
             fi.c = sc.nextInt();
             fss[i] = fi;
         }
+        fi = new FS();
+        fi.d = 0;
+        fi.c = Integer.MAX_VALUE;
+        fss[0] = fi;
         Arrays.sort(fss);
         this.fss = fss;
         System.out.println(solve(t,0,));
