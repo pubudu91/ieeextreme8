@@ -1,4 +1,4 @@
-type (Hea)
+type state = (Heap Int Int,Int,Heap Int Int)
 
 solve :: [Int] -> [Int] -> Int
 solve [_,m,k] as = solve' k l (drop k l)
