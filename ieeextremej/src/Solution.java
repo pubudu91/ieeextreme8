@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Solution {
     
-    private class FS {
+    private class FS implements Comparable<FS> {
         
         public int dist;
         public int cost;
@@ -16,6 +16,11 @@ public class Solution {
         public FS (int dist, int cost) {
             this.dist = dist;
             this.cost = cost;
+        }
+
+        @Override
+        public int compareTo(FS t) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
         
     }
