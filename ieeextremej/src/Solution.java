@@ -24,7 +24,11 @@ public class Solution {
         int m = sc.nextInt();
         this.n = sc.nextInt();
         long s = sc.nextLong();
-        printState(1,s,n); 
+        for(int i = 0x01; i < m; i++) {
+            printState(1,s,n);
+            s = next(s);
+        }
+        printState(m,s,n);
     }
     
     private long next (long r) {
@@ -51,6 +55,7 @@ public class Solution {
             }
         }
         System.out.print('-');
+        System.out.println();
     }
 
 }
