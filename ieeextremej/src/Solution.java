@@ -41,8 +41,7 @@ public class Solution {
                 itm = new Item();
                 itm.name = nm;
                 itm.weight = sc.nextInt();
-                System.out.println(sc.next());
-                //itm.value = sc.nextInt();
+                itm.value = sc.nextInt();
                 itms.add(itm);
             }
         }
