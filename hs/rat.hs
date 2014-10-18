@@ -1,11 +1,13 @@
-ferats :: [(Int]
-ferats = [a|a<-[2..1000],b<-[1..(a-1)],let cc = a*a-b*b, let c = floor ( sqrt ( fromIntegral cc)), b*b<cc,cc == c*c]
+import Data.List
 
-solve :: [String] -> String
-solve = solve' . map (read)
+ferats :: [Int]
+ferats = nub [a|a<-[2..1000],b<-[1..(a-1)],let cc = a*a-b*b, let c = floor ( sqrt ( fromIntegral cc)), b*b<cc,cc == c*c]
 
-solve' :: [Int] -> String
-solve' [a,b] | (elem a ferats) && (elem b ferats) = "TRUE"
-             | otherwise = "FALSE"
+--solve :: [String] -> String
+--solve = solve' . map (read)
 
-main = interact (unlines . map (solve . words) . tail . lines)
+--solve' :: [Int] -> String
+--solve' [a,b] | (elem a ferats) && (elem b ferats) = "TRUE"
+--             | otherwise = "FALSE"
+
+--main = interact (unlines . map (solve . words) . tail . lines)
