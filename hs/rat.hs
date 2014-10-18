@@ -1,3 +1,4 @@
+import Debug.Trace
 import Data.List
 
 --ferats :: [Int]
@@ -10,8 +11,8 @@ vferats a b = cc == c*c
 
 solve'' :: Int -> Int -> Bool
 solve'' a b | a < b = solve'' b a
-solve'' a b | otherwise = trace (show f) (a == f*b && (any (vferats (f*b)) (ferats a)))
-    where f = (div b a)
+solve'' a b | otherwise = a == f*b && (any (vferats (f*b)) (ferats a))
+    where f = (div a b)
 
 solve :: [String] -> String
 solve = solve' . map (read)
