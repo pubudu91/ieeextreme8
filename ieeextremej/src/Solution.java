@@ -84,9 +84,16 @@ public class Solution {
             rem -= wgh*take;
         }
         Collections.sort(itms,new Sorter());
+        int v = 0x00;
+        int w = 0x00;
         for(Item itmi : itms) {
-            
+            if(itmi.take > 0) {
+                System.out.println(itmi);
+                w += itmi.totalW();
+                v += itmi.totalV();
+            }
         }
+        System.out.println("%s,%s",w,v);
     }
     
 }
