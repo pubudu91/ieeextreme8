@@ -3,7 +3,7 @@ solve [_,m,k] as = solve' k l (drop k l)
     where l = (as++take (k-1) as)
 
 ith :: Int -> Int -> AVL e
-ith 
+ith k n = 
 
 solve' :: Int -> [Int] -> [Int]
 
