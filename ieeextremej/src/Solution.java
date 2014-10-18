@@ -7,6 +7,8 @@ import java.util.Scanner;
  */
 public class Solution {
     
+    private int n;
+    
 
     /**
      * @param args the command line arguments
@@ -19,9 +21,19 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
         int m = sc.nextInt();
-        int n = sc.nextInt();
+        this.n = sc.nextInt();
         long s = sc.nextLong();
         printState(1,s,n); 
+    }
+    
+    private static long next () {
+        for(int b = 0x00; b < n; b++) {
+            
+        }
+    }
+    
+    private static int pattern (int r, int dat) {
+        return 
     }
     
     private static void printState (int it, long state, int n) {
