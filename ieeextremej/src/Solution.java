@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class Solution {
 
+    public int full;
     public FS[] fss;
 
     private class FS implements Comparable<FS> {
@@ -29,7 +30,7 @@ public class Solution {
     private void run() {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int f = sc.nextInt();
+        this.full = sc.nextInt();
         int t = sc.nextInt();
         int l = sc.nextInt();
         FS[] fss = new FS[n];
@@ -52,7 +53,8 @@ public class Solution {
             return 0x00;
         } else {
             FS fsc = cheapest(from,to);
-            need = fsf.d-fsc.d;
+            need = Math.min(fsf.d-fsc.d,this.full);
+            int c = fsc.d*
         }
     }
 
