@@ -2,7 +2,7 @@ import Debug.Trace
 import Data.List
 
 --ferats :: [Int]
-ferats a = nub [b|b<-[1..(a-1)],let cc = a*a-b*b, let c = floor ( sqrt ( fromIntegral cc)), b*b<cc,cc == c*c]
+ferats a = nub [b|b<-[1..(a-1)],let cc = a*a-b*b, let c = floor ( sqrt ( fromIntegral cc)), b*b<=cc,cc == c*c]
 
 vferats :: Int -> Int -> Bool
 vferats a b = cc == c*c
