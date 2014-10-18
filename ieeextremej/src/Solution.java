@@ -27,18 +27,15 @@ public class Solution {
         printState(1,s,n); 
     }
     
-    private static long next (long r) {
+    private long next (long r) {
         long res = 0x00;
-        for(int m = n-0x01; m > 0x00; m--) {
+        for(int m = this.n-0x02; m >= 0x00; m--) {
             res |= (r>>((r>>m)&0x07))<<(m+0x01);
         }
+        res |= (r>>((r<<0x01)&0x07))<<(m+0x01);
     }
     
-    private static int pattern (long dat) {
-        return (r>>dat)&0x01;
-    }
-    
-    private static void printState (int it, long state, int n) {
+    private void printState (int it, long state, int n) {
         String num = ""+it;
         System.out.print(num);
         for(int i = num.length(); i < 3; i++) {
