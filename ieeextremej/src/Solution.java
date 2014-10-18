@@ -25,7 +25,7 @@ public class Solution {
         this.n = sc.nextInt();
         long s = sc.nextLong();
         for(int i = 0x01; i < m; i++) {
-            printState(1,s,n);
+            printState(i,s,n);
             s = next(s);
         }
         printState(m,s,n);
@@ -43,7 +43,7 @@ public class Solution {
     private void printState (int it, long state, int n) {
         String num = ""+it;
         System.out.print(num);
-        for(int i = num.length(); i < 3; i++) {
+        for(int i = num.length(); i < 4; i++) {
             System.out.print(' ');
         }
         System.out.print('-');
