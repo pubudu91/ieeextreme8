@@ -32,6 +32,7 @@ public class Solution {
         ArrayList<Item> itms = new ArrayList<>();
         Pattern p = Pattern.compile("\\w+");
         Item itm;
+        
         while(sc.hasNextLine()) {
             String nm = sc.next(p);
             if(nm.equals("END")) {
