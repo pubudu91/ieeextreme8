@@ -108,7 +108,10 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        byte b = state.load(instruction.args.get(0));
+                        if (instruction.args.size() <= 1) {
+                        }
+                        return String.format("0x%8s", Integer.toHexString(n)).replace(' ', '0');
                     }
                 },
         Move {
@@ -186,7 +189,7 @@ public class Solution {
 
                     @Override
                     public void run(Instruction instruction, State state) {
-                        if((instruction.cond&state.cmp) != 0x00) {
+                        if ((instruction.cond & state.cmp) != 0x00) {
                             state.jmp(instruction.args.get(0).label);
                         }
                     }
