@@ -168,12 +168,18 @@ public class Solution {
             do {
                 rem = false;
                 Flight alt = tij.floor(fli);
-                if(alt != null && fli.dominates(alt)) {
-                    tij.remove(alt);
-                    rem = true;
+                if (alt != null) {
+                    if (fli.dominates(alt)) {
+                        tij.remove(alt);
+                        rem = true;
+                    } else {
+
+                    }
                 }
-            } while(rem);
-            fls[pi][pj].add(fli);
+            } while (rem);
+            if (fli != null) {
+                fls[pi][pj].add(fli);
+            }
         }
         this.fls = fls;
         for (int qi = 0x00; qi < q; qi++) {
