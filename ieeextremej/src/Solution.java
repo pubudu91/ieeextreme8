@@ -128,11 +128,9 @@ public class Solution {
 
         Adres,
         Constant,
-        Reference
+        Reference;
         
-        private abstract int fetchMem (int value, State state) {
-            
-        }
+        private abstract int fetchMem (int value, State state);
     }
 
     private class State {
