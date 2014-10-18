@@ -8,6 +8,9 @@ import java.util.Scanner;
  */
 public class Solution {
 
+    private ArrayList<FS> fss;
+    private int full;
+
     private class FS implements Comparable<FS> {
 
         public int dist;
@@ -42,10 +45,14 @@ public class Solution {
             for (int i = 0; i < nGas; i++) {
                 int di = sc.nextInt();
                 int ci = sc.nextInt();
-                if (di < l) {
+                if (di < length) {
                     fss.add(new FS(di, ci));
                 }
             }
+
+            this.fss = fss;
+            this.full = full;
+
         }
     }
 
