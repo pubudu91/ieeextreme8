@@ -29,8 +29,8 @@ public class Solution {
     
     private static long next (long r) {
         long res = 0x00;
-        for(int b = n-0x01; b < n; b++) {
-            res |= pattern();
+        for(int m = n-0x01; m > 0x00; m--) {
+            res |= pattern((r>>m)&0x07)<<m;
         }
     }
     
