@@ -298,7 +298,7 @@ public class Solution {
     private class State {
 
         public ArrayList<Instruction> instructions = new ArrayList<>();
-        public byte[] memory = new byte[0xff];
+        public byte[] memory = new byte[0x100];
         public int pc = 0;
         public int cmp;
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
