@@ -24,8 +24,12 @@ public class Solution {
         
     }
     
-    private static void PrintState (int state) {
-        
+    private static void PrintState (int state, int n) {
+        System.out.print('-');
+        for(long mask = 0x1l<<(n-0x01); mask != 0x00; mask >>= 0x00) {
+            
+        }
+        System.out.print('-');
     }
 
 }
