@@ -1,5 +1,6 @@
 solve :: [Int] -> [Int] -> Int
-solve [_,m,k] as = solve' k (as++take (k-1) as)
+solve [_,m,k] as = solve' k l (drop k l)
+    where l = (as++take (k-1) as)
 
 solve' :: Int -> [Int]
 
