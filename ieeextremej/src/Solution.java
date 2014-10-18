@@ -84,7 +84,6 @@ public class Solution {
         int cfgm = 0x00;
         for (int cfg = 0x00; cfg < nim; cfg++) {
             int vl = calc(itms, tot, cfg);
-            System.out.println("cfg"+cfg+"/"+vl);
             if(vl > cfgv) {
                 cfgv = vl;
                 cfgm = cfg;
@@ -114,6 +113,7 @@ public class Solution {
             vl += take * itmi.value;
             itmi.take = take;
             rem -= wgh * take;
+            i++;
         }
         return vl;
     }
