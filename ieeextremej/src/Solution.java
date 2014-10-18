@@ -39,7 +39,7 @@ public class Solution {
             io = m.group(2).toLowerCase();
             ia = m.group(3).split(",");
             for(String iai : ia) {
-                
+                ins.args.add(decodeArgument(iai));
             }
             counter++;
         }
@@ -86,7 +86,7 @@ public class Solution {
         }
     }
 
-    public Argument DecodeArgument(String ia) {
+    public Argument decodeArgument(String ia) {
         Argument arg = new Argument();
         if(ia.startsWith("(")) {
             arg.meth = Argdres.Reference;
@@ -117,6 +117,7 @@ public class Solution {
 
         public Opcode op;
         public int cond;
+        public ArrayList<Argument> args = new ArrayList<>();
 
     }
 
