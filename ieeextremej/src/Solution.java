@@ -33,7 +33,7 @@ public class Solution {
                 m.find();
                 il = m.group(1);
                 if (il != null) {
-                    state.labels.put(il, counter);
+                    state.labels.put(il.trim(), counter);
                 }
                 Instruction ins = new Instruction();
                 io = m.group(2).toLowerCase();
@@ -125,8 +125,8 @@ public class Solution {
                         if (instruction.args.size() > 1) {
                             e = instruction.args.get(1).address(state);
                         }
-                        System.out.print(state.cmp);
-                        System.out.print('/');
+                        //System.out.print(state.cmp);
+                        //System.out.print('/');
                         printHex(state.memory[b++]);
                         for (; b <= e; b++) {
                             System.out.print(' ');
