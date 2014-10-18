@@ -164,7 +164,7 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         int a = state.load(instruction.args.get(0));
                         int b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1), (byte) (b & a));
+                        state.store(instruction.args.get(1), (b & a)&0xff);
                     }
                 },
         Or {
@@ -173,7 +173,7 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         int a = state.load(instruction.args.get(0));
                         int b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1), (byte) (b | a));
+                        state.store(instruction.args.get(1), (b | a)&0xff);
                     }
                 },
         Xor {
@@ -182,7 +182,7 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         int a = state.load(instruction.args.get(0));
                         int b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1), (byte) (b ^ a));
+                        state.store(instruction.args.get(1), (b ^ a)&0xff);
                     }
                 },
         Comp {
@@ -239,7 +239,7 @@ public class Solution {
             return meth.fetchAdress(this.addr, state);
         }
 
-        private void store(State state, byte val) {
+        private void store(State state, int val) {
             state.memory[meth.fetchAdress(this.addr, state)] = val;
         }
 
