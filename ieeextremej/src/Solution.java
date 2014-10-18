@@ -16,6 +16,9 @@ public class Solution {
 
     private void run() {
         Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int k = sc.nextInt();
     }
 
 }
