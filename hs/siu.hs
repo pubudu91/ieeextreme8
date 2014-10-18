@@ -15,5 +15,6 @@ powm n k | even n = pw
 main = do
     a <- getLine
     b <- getLine
-    c <- getLine
-    print (siu (map (read :: Int) (words b)) (read c :: Int))
+    let bints = map read $ words b
+    c <- readLn
+    print (siu bints c)
