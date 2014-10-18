@@ -37,6 +37,8 @@ public class Solution {
             } else {
                 itm = new Item();
                 itm.name = nm;
+                itm.weight = sc.nextInt();
+                itm.value = sc.nextInt();
                 itms.add(itm);
             }
             sc.nextLine();
