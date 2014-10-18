@@ -89,9 +89,10 @@ public class Solution {
             arg.meth = Argdres.Reference;
             arg.val = Integer.parseInt(ia.substring(0x01,ia.length()-0x01));
         } else if(ia.startsWith("#")) {
+            arg.meth = Argdres.Constant;
             arg.val = Integer.parseInt(ia.substring(0x01));
         } else {
-            
+            arg.val = Integer.parseInt(ia);
         }
         return arg;
     }
@@ -128,6 +129,10 @@ public class Solution {
         Adres,
         Constant,
         Reference
+        
+        private abstract int fetchMem (int value, State state) {
+            
+        }
     }
 
     private class State {
