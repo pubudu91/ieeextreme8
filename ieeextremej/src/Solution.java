@@ -110,7 +110,7 @@ public class Solution {
         return arg;
     }
 
-    public static void printHex(byte val) {
+    public static void printHex(int val) {
         System.out.print(String.format("%02X",val).toUpperCase());
     }
 
@@ -155,7 +155,7 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         int a = state.load(instruction.args.get(0));
                         int b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1), (b + a)&0xff);
+                        state.store(instruction.args.get(1), (b - a)&0xff);
                     }
                 },
         And {
