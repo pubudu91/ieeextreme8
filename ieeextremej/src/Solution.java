@@ -16,12 +16,13 @@ public class Solution {
 
     private void query(int pi, long da, int pj) {
         this.visi = new boolean[names.size()];
-        expand(pi);
+        expand(pi, da);
     }
 
-    private void expand(int pi) {
-        Tree<Flight>[] fli = fls[];
+    private void expand(int pi, long da) {
         
+        Tree<Flight>[] fli = fls[];
+
     }
 
     private class Flight implements Comparable<Flight> {
@@ -97,11 +98,11 @@ public class Solution {
         for (int fi = 0x00; fi < f; fi++) {
             int pi = hm.get(sc.next());
             long da = sc.nextInt();
-            da <<= 0x20;
+            da *= 1440;
             da |= sc.nextInt();
             int pj = hm.get(sc.next());
             long db = sc.nextInt();
-            db <<= 0x20;
+            db *= 1440;
             db |= sc.nextInt();
             Flight fli = new Flight(da, db);
             fls[pi][pj].add(fli);
@@ -110,7 +111,7 @@ public class Solution {
         for (int qi = 0x00; qi < q; qi++) {
             int pi = hm.get(sc.next());
             long da = sc.nextInt();
-            da <<= 0x20;
+            da *= 1440;
             da |= sc.nextInt();
             int pj = hm.get(sc.next());
             query(pi, da, pj);
