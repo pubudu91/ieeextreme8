@@ -30,12 +30,12 @@ public class Solution {
     private static long next (long r) {
         long res = 0x00;
         for(int m = n-0x01; m > 0x00; m--) {
-            res |= pattern((r>>m)&0x07)<<m;
+            res |= (r>>((r>>m)&0x07))<<(m+0x01);
         }
     }
     
-    private static int pattern (int dat) {
-        return dat&0x01;
+    private static int pattern (long dat) {
+        return (r>>dat)&0x01;
     }
     
     private static void printState (int it, long state, int n) {
