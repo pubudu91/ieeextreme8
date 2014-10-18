@@ -34,6 +34,18 @@ public class Solution {
             }
         }
     }
+    
+    private class Traveler implements Comparable<Traveler> {
+        
+        public int pj;
+        public long da;
+        
+        public Traveler (int pj, long da) {
+            this.pj = pj;
+            this.da = da;
+        }
+        
+    }
 
     private class Flight implements Comparable<Flight> {
 
