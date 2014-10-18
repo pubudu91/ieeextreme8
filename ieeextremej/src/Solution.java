@@ -168,7 +168,17 @@ public class Solution {
                     public void run(Instruction instruction, State state) {
                         byte a = state.load(instruction.args.get(0));
                         byte b = state.load(instruction.args.get(1));
-                        state.store(instruction.args.get(1),(byte) (b+a));
+                        int cmp = 0x00;
+                        if(a == b) {
+                            cmp |= EQ;
+                        } else {
+                            cmp |= NE;
+                            if(a < b) {
+                                cmp |= LT;
+                            } else {
+                                cmp |= GT;
+                            }
+                        }
                     }
                 },
         Jmp {
@@ -259,6 +269,7 @@ public class Solution {
         public ArrayList<Instruction> instructions = new ArrayList<>();
         public byte[] memory;
         public int pc = 0;
+        public int cmp;
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
 
         private void run() {
