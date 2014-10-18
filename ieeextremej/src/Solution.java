@@ -127,7 +127,7 @@ public class Solution {
                             e = instruction.args.get(1).address(state);
                         }
                         printHex(state.memory[b++]);
-                        for (; b < e; b++) {
+                        for (; b <= e; b++) {
                             System.out.print(' ');
                             printHex(state.memory[b]);
                         }
@@ -298,7 +298,7 @@ public class Solution {
     private class State {
 
         public ArrayList<Instruction> instructions = new ArrayList<>();
-        public byte[] memory = new byte[0x0f];
+        public byte[] memory = new byte[0xff];
         public int pc = 0;
         public int cmp;
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
