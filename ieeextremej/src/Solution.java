@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -27,10 +28,13 @@ public class Solution {
         int k = sc.nextInt();
         int tot = r*k;
         sc.nextLine();
+        ArrayList<Item> al = new ArrayList<>();
         while(sc.hasNextLine()) {
-            sc.next("\\w+");
-            if(sc.equals("END")) {
+            String nm = sc.next("\\w+");
+            if(nm.equals("END")) {
                 break;
+            } else {
+                
             }
             sc.nextLine();
         }
