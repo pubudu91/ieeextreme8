@@ -24,14 +24,14 @@ public class Solution {
         String il;
         String io;
         String[] ia;
-        Pattern parser0 = Pattern.compile("^(\\w+ )?(\\w+) +(.+)$");
+        Pattern parser0 = Pattern.compile("^(\\w+ +)?(\\w+) +(.+)$");
         State state = new State();
         int counter = 0;
         while (sc.hasNextLine()) {
             line = sc.nextLine();
             if (!line.equals("")) {
                 Matcher m = parser0.matcher(line);
-                m.find();
+                System.out.println(m.find());
                 il = m.group(1);
                 if (!il.equals("")) {
                     state.labels.put(il, counter);
