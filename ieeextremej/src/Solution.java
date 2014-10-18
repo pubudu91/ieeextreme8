@@ -23,11 +23,8 @@ public class Solution {
         while (pq.size() > 0x00) {
             Traveler t = pq.remove();
             if (t.pj == target) {
-                long ar = t.da - 60;
-                System.out.print(ar / 1440);
-                System.out.print(' ');
-                System.out.print(ar % 1440);
-                System.out.println();
+                printDate(t.da - 60);
+
                 return;
             } else {
                 expand(t.pj, t.da);
@@ -49,12 +46,20 @@ public class Solution {
                     TreeSet<Flight> flij = fli[pj];
                     Flight flu = flij.ceiling(flt);
                     if (flu != null) {
-                        System.out.println("schedule to " + pj + " at " + flu.from);
+                        System.out.print("schedule to " + pj + " at ");
+                        printDate(flu.from);
                         pq.add(new Traveler(pj, flu.to + 60));
                     }
                 }
             }
         }
+    }
+
+    public void printDate(long ar) {
+        System.out.print(ar / 1440);
+        System.out.print(' ');
+        System.out.print(ar % 1440);
+        System.out.println();
     }
 
     private class Traveler implements Comparable<Traveler> {
