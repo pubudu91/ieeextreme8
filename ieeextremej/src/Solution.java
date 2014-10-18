@@ -27,7 +27,7 @@ public class Solution {
         int k = sc.nextInt();
         int tot = r * k;
         sc.nextLine();
-        sc.useDelimiter(",");
+        sc.useDelimiter("[\n\t\r,]+");
         ArrayList<Item> itms = new ArrayList<>();
         Pattern p = Pattern.compile("[^,]+");
         Item itm;
@@ -40,7 +40,6 @@ public class Solution {
             } else {
                 itm = new Item();
                 itm.name = nm;
-                sc.skip(",");
                 itm.weight = sc.nextInt();
                 System.out.println(sc.next());
                 //itm.value = sc.nextInt();
