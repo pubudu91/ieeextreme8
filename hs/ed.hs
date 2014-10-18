@@ -1,7 +1,7 @@
 solve :: [Int] -> [Int] -> Int
 solve [_,m,k] as = solve' k (as++take (k-1) as)
 
-solve' :: Int -> [Int]
+solve' :: Int -> [Int]	
 
 main = do
     nmk <- getLine
