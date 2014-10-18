@@ -22,6 +22,11 @@ public class Solution {
         public int compareTo(Item t) {
             return ((Integer) (t.value * weight)).compareTo(t.weight * value);
         }
+
+        @Override
+        public String toString() {
+            return String.format("%s,%s,%s,%s",this.name,this.take,this.take*this.weight,this.take*this.value);
+        }
         
     }
     
