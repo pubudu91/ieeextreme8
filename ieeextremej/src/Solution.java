@@ -20,6 +20,9 @@ public class Solution {
         pq.clear();
         this.visi = new boolean[names.size()];
         expand(pi, da);
+        while(pq.size() > 0x00) {
+            
+        }
     }
 
     private void expand(int pi, long da) {
@@ -31,8 +34,8 @@ public class Solution {
         for (int pj = 0; pj < p; pj++) {
             if (!visi[pj]) {
                 TreeSet<Flight> flij = fli[pj];
-                flij.ceiling(flt);
-                pq.add(new Traveler());
+                Flight flu = flij.ceiling(flt);
+                pq.add(new Traveler(pj, flu.to + 60));
             }
         }
     }
