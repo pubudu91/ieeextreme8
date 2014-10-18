@@ -20,6 +20,7 @@ public class Solution {
     }
 
     private void expand(int pi, long da) {
+        Flight flt = new Flight();
         int p = visi.length;
         TreeSet<Flight>[] fli = fls[pi];
         boolean[] visi = this.visi;
@@ -27,6 +28,7 @@ public class Solution {
         for(int pj = 0; pj < p; pj++) {
             if(!visi[pj]) {
                 TreeSet<Flight> flij = fli[pj];
+                flij.ceiling(null)
             }
         }
     }
