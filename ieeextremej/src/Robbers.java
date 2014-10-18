@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  *
  * @author kommusoft
  */
-public class Solution {
+public class Robbers {
 
     private class Item implements Comparable<Item> {
 
@@ -52,7 +52,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        new Solution().run();
+        new Robbers().run();
     }
 
     private void run() {
