@@ -1,4 +1,4 @@
-import Data.Tree
+import Data.Tree.AVL
 
 type State = (AVL (Int,Int),Int,AVL (Int,Int))
 
