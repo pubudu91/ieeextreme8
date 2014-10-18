@@ -83,22 +83,13 @@ public class Solution {
         int cfgv = 0x00;
         int cfgm = 0x00;
         for (int cfg = 0x00; cfg < nim; cfg++) {
-            int rem = tot;
-            int vl = 0x00;
-            int i = 0;
-            for (Item itmi : itms) {
-                int wgh = itmi.weight;
-                int take = Math.max(0x00, (rem / wgh) - ((cfg >> i) & 0x01));
-                vl += take * itmi.weight;
-                itmi.take = take;
-                rem -= wgh * take;
-            }
+            int vl = calc(itms, tot, cfg);
             if(vl > cfgv) {
                 cfgv = vl;
                 cfgm = cfg;
             }
         }
-        
+        calc(itms, tot, cfgm);
         Collections.sort(itms, new Sorter());
         int v = 0x00;
         int w = 0x00;
@@ -111,6 +102,19 @@ public class Solution {
         }
         System.out.println(String.format("%s,%s", w, v));
         System.out.println(String.format("Each robber gets: %.2f", (double) v / r));
+    }
+
+    private int calc(ArrayList<Item> itms, int rem, int cfg) {
+        int vl = 0x00;
+        int i = 0;
+        for (Item itmi : itms) {
+            int wgh = itmi.weight;
+            int take = Math.max(0x00, (rem / wgh) - ((cfg >> i) & 0x01));
+            vl += take * itmi.weight;
+            itmi.take = take;
+            rem -= wgh * take;
+        }
+        return vl;
     }
 
 }
