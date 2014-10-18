@@ -20,7 +20,7 @@ public class Solution {
     }
 
     private void expand(int pi, long da) {
-        
+
         Tree<Flight>[] fli = fls[];
 
     }
