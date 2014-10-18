@@ -12,7 +12,7 @@ vferats a b d = e*b == a*d && cc == c*c
 
 solve'' :: Int -> Int -> Bool
 solve'' a b | a < b = solve'' b a
-solve'' a b | otherwise = a == fb && (any (vferats fb) (ferats a))
+solve'' a b | otherwise = a == fb && (any (vferats b a) (ferats a))
     where f = a/b
           fb = f*b
 
