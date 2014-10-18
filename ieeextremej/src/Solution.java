@@ -27,7 +27,7 @@ public class Solution {
         int k = sc.nextInt();
         int tot = r * k;
         sc.nextLine();
-        sc.useDelimiter(",")
+        sc.useDelimiter(",");
         ArrayList<Item> itms = new ArrayList<>();
         Pattern p = Pattern.compile("[A-Za-z0-9]+");
         Item itm;
