@@ -34,7 +34,7 @@ public class Solution {
     private long next (long s) {
         long res = 0x00l;
         for(int m = this.n-0x02; m >= 0x00; m--) {
-            System.out.println((s>>m)&0x07);
+            System.out.println(Long.toBinaryString((s>>m)&0x07));
             res |= ((r>>((s>>m)&0x07))&0x01)<<(m+0x01);
         }
         res |= ((r>>((s<<0x01)&0x07))&0x01);
