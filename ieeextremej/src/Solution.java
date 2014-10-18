@@ -34,7 +34,7 @@ public class Solution {
         this.full = sc.nextInt();
         int t = sc.nextInt();
         int l = sc.nextInt();
-        FS[] fss = new FS[n];
+        FS[] fss = new FS[n+0x02];
         for (int i = 0; i < n; i++) {
             FS fi = new FS();
             fi.d = sc.nextInt();
@@ -43,6 +43,7 @@ public class Solution {
         }
         Arrays.sort(fss);
         this.fss = fss;
+        System.out.println(solve(t,0,));
         
     }
     
@@ -57,7 +58,9 @@ public class Solution {
             int idx = this.index;
             need = Math.min(fsf.d-fsc.d,this.full);
             int c = need*fsc.c;
-            solve(f0,from,index);
+            c += solve(f0,from,index);
+            c += solve(need,from,to);
+            return c;
         }
     }
 
