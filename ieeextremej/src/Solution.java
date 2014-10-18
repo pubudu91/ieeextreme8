@@ -40,9 +40,9 @@ public class Solution {
             } else {
                 itm = new Item();
                 itm.name = nm;
-                sc.next();
+                sc.skip(",");
                 itm.weight = sc.nextInt();
-                sc.next();
+                sc.skip(",");
                 itm.value = sc.nextInt();
                 itms.add(itm);
             }
