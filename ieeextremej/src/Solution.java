@@ -43,6 +43,7 @@ public class Solution {
             }
             counter++;
         }
+        state.run();
     }
 
     public Opcode decodeIns(String io, Instruction ins) {
@@ -179,6 +180,13 @@ public class Solution {
         public byte[] memory;
         public int pc = 0;
         public HashMap<String, Integer> labels = new HashMap<String, Integer>();
+
+        private void run() {
+            while(pc < instructions.size()) {
+                Instruction ins = instructions.get(pc++);
+                ins.run(this);
+            }
+        }
 
     }
 
