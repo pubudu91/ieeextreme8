@@ -20,7 +20,8 @@ public class Solution {
         int r = sc.nextInt();
         int m = sc.nextInt();
         int n = sc.nextInt();
-        int s = sc.nextInt();
+        long s = sc.nextLong();
+        printState(s,n);
         
     }
     
@@ -30,7 +31,7 @@ public class Solution {
             if((state&mask) != 0x00) {
                 System.out.print('*');
             } else {
-                System.out.print('-');
+                System.out.print(' ');
             }
         }
         System.out.print('-');
