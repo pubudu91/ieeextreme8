@@ -25,7 +25,7 @@ public class Solution {
         
     }
     
-    private static void PrintState (long state, int n) {
+    private static void printState (long state, int n) {
         System.out.print('-');
         for(long mask = 0x1l<<(n-0x01); mask != 0x00; mask >>= 0x00) {
             if((state&mask) != 0x00) {

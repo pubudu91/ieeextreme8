@@ -6,3 +6,4 @@
 *.dll
 *.out
 /ieeextremej/nbproject/private/
+/ieeextremej/build/
