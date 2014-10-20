@@ -1,5 +1,5 @@
 # Play with GCD
-Task
+## Task
 Minka is very smart kid who recently started learning computer programming. 
 He learned how to calculate the Greatest Common Divisor (GCD) of given numbers. The GCD http://en.wikipedia.org/wiki/Greatest_common_divisor of k numbers say [n1,n2,n3… nk] is the largest positive integer that divides all these numbers without any remainder. You may find out more about the GCD and the way it is calculated on the Wikipedia website. 
 Minka has N (1 <= N <= 10^5) balls and there is a number V (1 <= V <= 10^4) written on every ball. Now Minka has to perform Q queries, and in each query he wants to know the number of possible ways he can choose balls out of the N balls, so that GCD of the numbers written on the chosen balls equals to the number X of each query. Although he already knows the answer for each query, he would still like you to check if you can also find answer to his queries. 
@@ -14,7 +14,7 @@ The next line contains N space separated integer numbers, each one representing 
 The third line contains an integer Q (1 <= Q <= 10^4) representing the number of GCD queries that will have to be performed. 
 Finally, Q lines follow, each one containing an integer X (1 <= X <= 10^4) corresponding to the GCD of each query.
 
-Output
+## Output
 Your program should output the number of ways modulus 10^9+7 that balls can be drawn from the set, so that their GCD equals the number X corresponding to each query. 
 Note: There is a newline character at the end of the last line of the output.
 

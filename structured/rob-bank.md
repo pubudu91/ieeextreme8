@@ -6,7 +6,7 @@ Unfortunately, something goes wrong and after opening the door, an alarm safety 
 Time is crucial and luckily, you come prepared for this problem and you put in practice your tech skills and run a program in order to help you decide which items you need to carry in order to gain the highest profit based on your total teams load capacity. 
 Of course, as you would expect a large amount of money is in game as the vault is ?endless?; if not why would you want to rob the ?Big Bank? in the first place? As a good robber and programmer you know that your program needs to be fast enough to give you a solution in a reasonable amount of time so you also give priority to the items stored in the vault based on their profit Ratio = value/load (you want to keep the items with highest value and have less load).
 
-Task
+## Task
 Your task involves implementing a program that will help the robbers choose how many values they need to grab in order to maximize the revenue of their robbery and the items you need to get from the vault in order to achieve this. You will also show how much share each robber gains from this hit based on what they can carry after the revenue has been decided.
 
 ## Input
@@ -17,7 +17,7 @@ Example: Diamond,2000000,200 : the 200 is the value for the whole amount of 2000
 The list of elements of the bank will finish with the keyword END in the last line of input.
 Note: There will be at maximum 5 items per input test case.
 
-Output
+## Output
 The format of the solution will be in the form of multiple lines where the first lines have the following structure: 
 [item name],[number of times taken],[total aggregated load of this item],[total aggregated value of this item]. 
 The items in the output string should be listed in alphabetical order (from A to Z) based on the name of each item (for example, if the items chosen to be taken are Jewelry, Money, and Diamond, then tehy should be ordered as Diamond, Jewelry and then Money). 

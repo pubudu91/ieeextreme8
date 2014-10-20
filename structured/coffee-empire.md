@@ -14,7 +14,7 @@ If we were to build our coffee shop at a particular corner, then we should also 
 The income corresponding our shop for a given day and corner, will equal the daily income for that corner ( as reported by the statistics plus any additional income based on its adjacent corners ) divided by the overall number of coffee shops located at this corner (note that this value is not always guaranteed to be an integer). For example, if there already exist 2 coffee shops at corner E and the daily income for this corner according to the statistics and the adjacent corners of E equals 27 euros, then we should expect that the daily income for our shop will be 9 euros, as the overall amount of 27 euros will be equally split to all three coffee shops of this corner (also considering our own shop in case we decide to build it at that specific corner).
 In order for our coffee shop to be open during a given day of the week, the total income corresponding to our coffee shop for that day should be greater or equal to its daily expenses (i.e. 20 Euros ). Otherwise, there is no point opening our coffee shop during that day and thus both income and expenses for that day would equal zero.
 According to the town hall rules, it is forbidden to install more than 3 coffee shops per corner .
-Task
+## Task
 Your task is to develop a program that can find the position that is best for us (i.e. the position that makes us the most profit on a weekly basis ) to set up our new coffee shop. Can you help us?
 
 ## Input
@@ -23,7 +23,7 @@ In the first line, the width (W<=100) and height (H<=100) of our town, which we 
 Then H lines will follow each one describing the number of coffee shops already located at each corner. Each line will be composed of a character belonging to the [-, L, M, H] alphabet followed by an asterisk ( * ), with the exception of the character corresponding to the last corner of each line, which will be followed by a newline character. A dash "-" means "no coffee shops", "L" means only one coffee shop, "M" means two and "H" means three. For example, the first line of the provided sample case indicates that there are no coffee shops located at the first corner (X:1, Y:1), three coffee shops on the second corner (X:2, Y:1) and no coffee shops on the third corner (X:3, Y:1). 
 Then seven [W, H] blocks of lines will follow, each one corresponding to the statistics of each corner for each day of the week. In the first line of each block, the name of the day will be given followed by the number of coffees that will be sold per corner. Again, the number of coffees sold per corner will be separated by an asterisk (*) with the exception of the number corresponding to the last corner of each line, which will be followed by a newline character.
 
-Output
+## Output
 Your program should output to the Standard Output Stream the coordinates where we should place our new coffee shop. The coordinates are considered to start from 1 and should be reported in the [X, Y] order, where X corresponds to a column and Y to a line of the town grid. These two values should be separated by a single space character. If there are more than one corners with as equally as optimal income, then the first should be printed. In case, there is no such a place, then the output “-1 -1” (without the quotes) should be printed on the screen. 
 Note: There is NOT a newline character at the end of the output stream
 

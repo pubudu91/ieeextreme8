@@ -5,7 +5,7 @@ This problem seems quite easy: it seems that we are giving you the answer… All
 ## Input
 A string of characters, ending with a dot ('.').
 
-Output
+## Output
 Your program should print the output of an MS-DOS 8086 assembly program p.com on the given input. 
 Our program (in hex dump) is:
 

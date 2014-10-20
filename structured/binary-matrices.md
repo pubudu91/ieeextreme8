@@ -7,7 +7,7 @@ First line: N, M , the size of the matrix (1<=N<100 and 1<=M<=10).
 Next N lines: M bits in each line. 
 Note: Please pay attention to the different limits (for N and M) used in this challenge as opposed to the IBM challenge and to the fact that in this challenge the input consists of N * M integers while the sample matrix at IBM website has N strings with M digits.
 
-Output
+## Output
 In the first line of the output, the number of errors K should be printed. 
 Then K lines should follow, listing all errors. 
 At first all type 1 errors should be reported in the format: 

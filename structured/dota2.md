@@ -11,13 +11,13 @@ In order to simplify things; the value zi can be mapped as the relative populari
 Example: “If the hero Spectre with 34:22 ratio is located in the position 3 of the list, its world wide rank is proportional to 1/3 and its winner ratio will be 60 (i.e. 34/(22+34) = 0.607 = 60.7%, therefore his winner ratio will be 60, i.e. 60.7=60 when rounded down to the nearest whole number) so q3 = 60/(1/3) = 180” 
 In addition, you are capable of identifying a players affinity for a certain type of hero from the Strength, Agility and Intelligence areas on the pool of the selected group of heroes that you give as a solution.
 
-Task
+## Task
 Your task is to select from a pool of heroes and game plays statistics of the player, a subset of desired heroes that the player excels most based on the quality of a hero. In addition, you should give out the affinity of the hero type of that player based on the small pool asked previously for.
 
 ## Input
 The first line of input contains two integers n and m (1 <= n <= 50000, 1 <= m <= n), the number of heroes available, and the number of heroes to select. Then follow n lines. The ith of these lines contains a string with the hero name, the hero type and the win:loss ratio with that hero, separated by commas.
 
-Output
+## Output
 Output a list of the m heroes with the highest quality qi, in decreasing order of quality. If two heroes have the same quality, give precedence to the one appearing first on the list. 
 After that, you should print the affinity in the order Intelligence, Strength, Agility for each type of hero as a percentage formatted down to 2 digits on the selected group of heroes. 
 Note: There is a newline character at the end of the last line of the output.

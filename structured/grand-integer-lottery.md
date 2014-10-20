@@ -9,7 +9,7 @@ For an example: S=1, E=35, N=2, n1=3 and n2=11, then the generated lottery seque
 
 After the lottery sequence has been generated, the lottery picks the winning number using the given winning index of the sequence. First integer of the sequence has index 1. For the example above, if the lottery company picked the 5th index as the winning index , then winning number would be 30 (i.e. the 5th integer of the lottery sequence).
 
-Task
+## Task
 The task in this problem is to find and print the winning number of the lottery for the given set of inputs.
 
 ## Input
@@ -28,7 +28,7 @@ N The amount of positive integers that a player picks (1 <= N <= 18)
 
 Then, N lines follow, each one ending with a newline character, representing the N positive integers that were selected by the player. Each of the user-picked integers will consist up to 18 digits (i.e. 1 <= The number of digits in any user-picked integer <=18). Also, for each number it holds true that it begins with a nonzero digit.
 
-Output
+## Output
 Your program should print the winning number to the standard output. If no such number exists, then the output should be: 
 DOES NOT EXIST 
 Otherwise, the program should print the winning number e.g.: 

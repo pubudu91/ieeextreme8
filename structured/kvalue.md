@@ -1,7 +1,7 @@
 # "K"-value
 You are given N integers that are arranged circularly. There are N ways to pick consecutive subsequences of length M (M < N). For any such subsequence we can find the “K”-value of that subsequence. “K”-value for a given subsequence is the Kth smallest number in that subsequence.
 
-Task
+## Task
 Find the smallest “K”-value out of all possible subsequences. 
 1 < N <= 100,000 
 1 <= M < N 
@@ -12,7 +12,7 @@ Find the smallest “K”-value out of all possible subsequences.
 First line of the input will contain three integers N, M and K separated by spaces respectively. 
 Second line of the input will contain N integers separated by spaces in clockwise order starting from an arbitrary location.
 
-Output
+## Output
 Output should contain only one integer, smallest “K”-value out of all possible subsequences. 
 Note: There is a newline character at the end of the last line of the output.
 

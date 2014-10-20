@@ -11,7 +11,7 @@ When pipeline enters into the column i (1 <= i < N), the pipeline can be laid to
 Lay the pipeline upward any number of cells (say d) within the city boundary and move to column i+1 at row j-d. i.e. d+1 cells in column i will be digged up
 Lay the pipeline downward any number of cells (say d) within the city boundary and move to column i+1 at row j+d. i.e. d+1 cells in column 1 will be digged up
 Lay pipeline to column i+1 through current cell. i.e. Only 1 cell will be digged up in column i
-Task
+## Task
 Given digging up costs for each cell in the city, find the minimum cost for laying the pipeline from column 1 to column N.
 
 1 <= N <= 1000 
@@ -22,7 +22,7 @@ First line of the input will contain an integer N, the number of rows and column
 Next N lines will represent row 1 to row N respectively. 
 Each row will have N integers separated by spaces representing costs of column 1 to column N respectively of the corresponding rows.
 
-Output
+## Output
 Output should contain only one integer, minimum cost for digging up the cells that pipeline goes through. 
 Note: There is a newline character at the end of the last line of the output. If you are using C++, use scanf() instead of std::cin as it can be slower reading input
 

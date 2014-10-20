@@ -4,7 +4,7 @@ Vangelis the bear is planning a long road trip during which he wants to visit al
 Vangelis knows how far each of the N gas stations are from the beginning of the path and the price per fuel unit each station offers. 
 At the starting point he has T units of fuel in his car.
 
-Task
+## Task
 Write a program that will accept the above information and will calculate the minimum amount of money Vangelis needs to spend. If the journey is impossible to make, it should print -1.
 
 ## Input
@@ -18,7 +18,7 @@ Each of the following N lines will contain two integers: the first one, D_i (0 <
 
 Note: You may assume that the trip will be on a straight line where all gas stations are spread on this line at the positions specified by their D_i values.
 
-Output
+## Output
 There should be M lines with the minimum amount of money to be spent per test case or with -1 in case the trip is not feasible. 
 Note: There is a newline character at the end of the last line of the output.
 

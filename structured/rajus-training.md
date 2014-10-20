@@ -3,7 +3,7 @@
 Raju was accepted at the Computer Science Department of a leading University and he is now interested in becoming a winner at IEEEXtreme 8.0. However his programming skills are not ?sharp? enough and thus he asked the help of Rano, a senior year student of the same department. 
 Raju has analyzed all subjects of study that has to mastered before he becomes proficient in programming and has discovered that there are some constraints in the way that these subjects should be studied (i.e. certain subjects may be studied before some others). Rano, who is more experienced, volunteered to organize these subjects according to their constraints and provide Raju with a plan of study that will be consistent to the provided constraints. Can you verify that Ranos plan of study indeed satisfies all constraints?
 
-Task
+## Task
 Given a number of study subjects (N) and some constraints (M), your task is to evaluate a given study plan and assert whether it satisfies all constraints or not.
 
 ## Input
@@ -13,7 +13,7 @@ Then, M lines will follow, each one containing two space-separated positive inte
 
 The final line of the input contains a sequence of space-separated positive integers, each of which corresponds to one of the N study subjects. This line represents the study plan that was proposed by Rano.
 
-Output
+## Output
 Your program should output to the standard output stream a single line containing the word: 
 YES (if the proposed study plan fulfills all the provided constraints) , or the word: 
 NO (if the proposed study plan fails to fulfill even a single constraint ) 

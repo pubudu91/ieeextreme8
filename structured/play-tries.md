@@ -12,14 +12,14 @@ On the left, a Trie with the words “IEEE” and “QUIZ”. On the right, a Tr
 The Tries shown above use the 26 letters of the English alphabet. So, each node contains 26 links despite using just one or two of them (e.g. the root node on the left Trie and first node labeled with B on the right Trie use 2 links each, whereas all the remaining nodes on both Tries use only a single link out of the 26 available letters). Each link needs 4 bytes. So, the Trie on the left consumes 9 nodes times 26 links times 4 bytes = 936 bytes. The Trie on the right uses 7 nodes, so it consumes 728 bytes. 
 Mike is going to play in many words, but hes worried that his Trie will consume too much memory.
 
-Task
+## Task
 Given the size of the alphabet A , the maximum length of the words L and the number N of words to consider, your task is to find what is the maximum amount of bytes necessary to store N words in a Trie.
 
 ## Input
 The first line of input contains an integer T (1 <= T <= 10^5) the number of test cases. 
 Then, T lines follow, each containing three integers A (1 <= A <= 26), L (1 <= L <= 10^5) and N (1 <= N <= 10^18), separated by a single space.
 
-Output
+## Output
 For each test case, your program should print one line with a single integer: the worst-case amount of memory necessary. 
 Note1: The result is guaranteed to fit in a signed 64-bit integer. 
 Note2: There is a newline character at the end of the last line of the output.

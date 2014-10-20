@@ -34,7 +34,7 @@ Thus, the new state has a different pattern of TRUE/FALSE cells. The process the
 
 The cellular automaton ends after the cells reach a steady state (no more changes from one iteration to the next) or one reaches a maximum number of iterations.
 
-Task
+## Task
 Write a program that can draw any rule in the elementary cellular automaton given a rule number, integer N for the number of cells, and initial conditions for the cells. The program should output the automaton until either of the two terminating conditions is met.
 
 ## Input
@@ -45,7 +45,7 @@ The input will contain the following single-space separated parameters:
 8 <= Number of cells, N <= 64
 0 <= Integer representing initial condition for N cells <= 2^64 -1 
 (where the binary representation shows the TRUE/FALSE state of the N cells)
-Output
+## Output
 The program should output the iteration number formatted as a left-aligned 3-digit number padded with spaces. Then, each iteration of the automaton should be displayed with cells marked as TRUE shown as an asterisk character (*) and cells marked as FALSE should be a space character ( ). The cells in the state should be surrounded by dashes to make it easier to differentiate when the empty states are. 
 Note: There is a newline character at the end of the last line of the output.
 

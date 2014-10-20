@@ -2,7 +2,7 @@
 
 A research team at the Star Fleet Academy is close to perfecting the first warp drive. They are planning to create a commercial space flight company, Xtreme Space Lines (XSL).
 
-Task
+## Task
 The research team would like you to write a trip planner program that finds the fastest trip on XSL, if one exists, given a passengers desired start and end location and their earliest departure time. If the shortest trip involves one or more transfers, each stopover must be at least 1 hour long.
 
 ## Input
@@ -32,7 +32,7 @@ Where
 
 The dates are non-negative integers,each less or equal to than 2 billion, equal to the number of days after October 18, 2014. The times are non-negative integers equal to the number of minutes after midnight, i.e. they are integers between 0 and 1439, inclusive. The locations provided in the flights and the queries are all drawn from the list of p space ports provided in the test case.
 
-Output
+## Output
 Your program should output the date and the time, in the same form as the input, of the earliest possible arrival for each query. If there is no trip possible, your program should output "No trip on XSL". 
 Note: Every line of output should end in a newline character .
 
