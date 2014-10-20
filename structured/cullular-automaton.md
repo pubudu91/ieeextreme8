@@ -37,7 +37,7 @@ The cellular automaton ends after the cells reach a steady state (no more change
 Task
 Write a program that can draw any rule in the elementary cellular automaton given a rule number, integer N for the number of cells, and initial conditions for the cells. The program should output the automaton until either of the two terminating conditions is met.
 
-Input
+## Input
 The input will contain the following single-space separated parameters:
 
 1 <= Rule # <= 256

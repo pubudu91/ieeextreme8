@@ -8,7 +8,7 @@ Find the smallest “K”-value out of all possible subsequences.
 1 <= K <= M 
 0 <= any integer in the circle <= 2,147,483,647
 
-Input
+## Input
 First line of the input will contain three integers N, M and K separated by spaces respectively. 
 Second line of the input will contain N integers separated by spaces in clockwise order starting from an arbitrary location.
 

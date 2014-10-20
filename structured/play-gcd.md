@@ -8,7 +8,7 @@ Notes:
 1) There can be at most 100 distinct numbers written on N balls. 
 2) By definition, the GCD is only defined for 2 or more numbers. For this problem, however, we will consider that the GCD of a single number may also defined and in such case the GCD of a single number will be equal to the number itself (i.e. the GCD of 2 is 2. Please refer to the explanation of Sample Input 1 for more details).
 
-Input
+## Input
 The first line of each test file contains an integer N (1 <= N <= 10^5) denoting the number of balls. 
 The next line contains N space separated integer numbers, each one representing the number written on each of the N balls. The ith number (Vi) corresponds to the number written on the ith ball (1 <= Vi <= 10^4). 
 The third line contains an integer Q (1 <= Q <= 10^4) representing the number of GCD queries that will have to be performed. 

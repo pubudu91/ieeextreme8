@@ -5,7 +5,7 @@ Vangelis the bear wants to place a set of right-angled triangles on a Cartesian 
 Task
 Write a program that will accept the lengths of the triangle legs and will print "TRUE" if the triangle can be placed following the above conditions and print "FALSE" if it fails the above conditions.
 
-Input
+## Input
 The first line will contain an integer N (0 < N < 11), the number of triangles to study. 
 Each of the following N lines will contain two space separated integers a,b (0 < a,b < 1001), corresponding to the lengths of the triangle legs.
 

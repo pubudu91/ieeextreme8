@@ -2,7 +2,7 @@
 
 Help IBM puzzlemaster to test answers to January's 2014 challenge (http://domino.research.ibm.com/Comm/wwwr_ponder.nsf/Challenges/January2014.html).
 
-Input
+## Input
 First line: N, M , the size of the matrix (1<=N<100 and 1<=M<=10). 
 Next N lines: M bits in each line. 
 Note: Please pay attention to the different limits (for N and M) used in this challenge as opposed to the IBM challenge and to the fact that in this challenge the input consists of N * M integers while the sample matrix at IBM website has N strings with M digits.

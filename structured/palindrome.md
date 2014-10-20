@@ -9,7 +9,7 @@ A palindrome is a word that is symmetric: it can be read indifferently from left
 Task
 Our goal is to find the length of one of the longest extracted palindrome from a given word w. Of course if w is a palindrome then the answer should be the length of w, and the answer is always greater or equal than 1.
 
-Input
+## Input
 The input given your program is a one line string containing only lowercase latin alphabet letters (no space), followed by a newline character. The length of this input string will never exceed 2000 characters.
 
 Output

@@ -5,7 +5,7 @@ A research team at the Star Fleet Academy is close to perfecting the first warp 
 Task
 The research team would like you to write a trip planner program that finds the fastest trip on XSL, if one exists, given a passengers desired start and end location and their earliest departure time. If the shortest trip involves one or more transfers, each stopover must be at least 1 hour long.
 
-Input
+## Input
 The first line in the test case contains three integers: the number of space ports, p , 1 <= p <= 1,000; the number of planned flights, f, 1 <= f <= 500,000; and the number of passenger queries, q , 1 <= q <= 100. 
 On the next p lines are names of space ports, one per line, which are comprised only of alphanumeric characters and the underscore. 
 Next are f lines, each describing a flight, in the form:

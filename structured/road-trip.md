@@ -7,7 +7,7 @@ At the starting point he has T units of fuel in his car.
 Task
 Write a program that will accept the above information and will calculate the minimum amount of money Vangelis needs to spend. If the journey is impossible to make, it should print -1.
 
-Input
+## Input
 The first line will contain an integer M (1 <= M <= 10) denoting number of Test cases. 
 The next line will contain four space separated integers: 
 N (0 < N < 50001): The total number of gas stations 

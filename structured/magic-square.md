@@ -5,7 +5,7 @@ Johnny designed a magic square (square of numbers with the same sum for all rows
 Task
 Write a program that will check if the given square is magic (i.e. has the same sum for all rows, columns and diagonals).
 
-Input
+## Input
 First line: N , the size of the square (1 <= N <= 1000). 
 Next N lines: The square, N space separated integers pre line, representing the entries per each row of the square.
 

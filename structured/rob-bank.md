@@ -9,7 +9,7 @@ Of course, as you would expect a large amount of money is in game as the vault i
 Task
 Your task involves implementing a program that will help the robbers choose how many values they need to grab in order to maximize the revenue of their robbery and the items you need to get from the vault in order to achieve this. You will also show how much share each robber gains from this hit based on what they can carry after the revenue has been decided.
 
-Input
+## Input
 The information for the program will be passed through standard input. The first line will contain two positive single space separated integer values N and M, corresponding to the number of robbers involved in the heist and to the load capacity of each robber (all robbers will have the same load capacity equal to M). . 
 Then it will follow multiple lines with details of each valuable stored in the vault with their respective load and value, in the following format: 
 [item name],[whole load amount],[value for whole amount] 

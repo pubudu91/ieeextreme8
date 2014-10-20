@@ -2,7 +2,7 @@
 
 This problem seems quite easy: it seems that we are giving you the answer… All you have to do is supply the output of our program on the given input.
 
-Input
+## Input
 A string of characters, ending with a dot ('.').
 
 Output

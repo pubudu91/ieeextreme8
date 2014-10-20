@@ -11,7 +11,7 @@ Write a program that takes as an input a number of different pizza combinations 
 
 The input should be of the form: number of different pizza combinations, number of slices of each pizza, and toppings selected for each of the slices.
 
-Input
+## Input
 The input will contain:
 
 1 <= different pizza combinations <= 100

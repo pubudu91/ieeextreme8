@@ -12,7 +12,7 @@ After the lottery sequence has been generated, the lottery picks the winning num
 Task
 The task in this problem is to find and print the winning number of the lottery for the given set of inputs.
 
-Input
+## Input
 The format of the input is as follows: 
 S E P N 
 n1 

@@ -17,7 +17,7 @@ Given digging up costs for each cell in the city, find the minimum cost for layi
 1 <= N <= 1000 
 0 <= cost of digging up the cell at column i and row j, c(i,j)<= 1,000,000
 
-Input
+## Input
 First line of the input will contain an integer N, the number of rows and column in city. 
 Next N lines will represent row 1 to row N respectively. 
 Each row will have N integers separated by spaces representing costs of column 1 to column N respectively of the corresponding rows.

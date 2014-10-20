@@ -16,7 +16,7 @@ The same set of rules can be applied to the resulting sequence to generate more 
 Task
 Write a program that computes the next K instances of the Nekops-Nu sequence for a given sequence of numbers.
 
-Input
+## Input
 The input will contain:
 
 0 <= Number of iterative sequences to compute, K <= 10

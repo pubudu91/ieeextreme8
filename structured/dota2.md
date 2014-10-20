@@ -14,7 +14,7 @@ In addition, you are capable of identifying a players affinity for a certain typ
 Task
 Your task is to select from a pool of heroes and game plays statistics of the player, a subset of desired heroes that the player excels most based on the quality of a hero. In addition, you should give out the affinity of the hero type of that player based on the small pool asked previously for.
 
-Input
+## Input
 The first line of input contains two integers n and m (1 <= n <= 50000, 1 <= m <= n), the number of heroes available, and the number of heroes to select. Then follow n lines. The ith of these lines contains a string with the hero name, the hero type and the win:loss ratio with that hero, separated by commas.
 
 Output

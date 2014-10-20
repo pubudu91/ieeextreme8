@@ -12,7 +12,7 @@ The best possible hand has a value of 140, and is obtained by keeping the cards 
 
 IMAGE 2
 
-Input
+## Input
 The input is made up of multiple test cases (#test cases<=30, if 1<=n<=10 or #test cases<=10 if 10<=n<=1000). Each test case contains three lines of input. 
 The first line in each test case is an integer n , 1 <= n <= 1,000, indicating how many cards are in each row. 
 The second line of the test case will contain n symbols representing the ranks of the cards in the first row. Each symbol will be chosen from the list {A, 2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, R}. The symbols in the list represent the following ranks, respectively, {Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Joker}. Similarly, the third line of the test case will contain the n symbols of the cards in the second row. 

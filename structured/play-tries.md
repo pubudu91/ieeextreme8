@@ -15,7 +15,7 @@ Mike is going to play in many words, but hes worried that his Trie will consume 
 Task
 Given the size of the alphabet A , the maximum length of the words L and the number N of words to consider, your task is to find what is the maximum amount of bytes necessary to store N words in a Trie.
 
-Input
+## Input
 The first line of input contains an integer T (1 <= T <= 10^5) the number of test cases. 
 Then, T lines follow, each containing three integers A (1 <= A <= 26), L (1 <= L <= 10^5) and N (1 <= N <= 10^18), separated by a single space.
 

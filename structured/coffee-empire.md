@@ -17,7 +17,7 @@ According to the town hall rules, it is forbidden to install more than 3 coffee 
 Task
 Your task is to develop a program that can find the position that is best for us (i.e. the position that makes us the most profit on a weekly basis ) to set up our new coffee shop. Can you help us?
 
-Input
+## Input
 Your program will receive the following input from the Standard Input Stream: 
 In the first line, the width (W<=100) and height (H<=100) of our town, which we can assume that is a perfect grid. 
 Then H lines will follow each one describing the number of coffee shops already located at each corner. Each line will be composed of a character belonging to the [-, L, M, H] alphabet followed by an asterisk ( * ), with the exception of the character corresponding to the last corner of each line, which will be followed by a newline character. A dash "-" means "no coffee shops", "L" means only one coffee shop, "M" means two and "H" means three. For example, the first line of the provided sample case indicates that there are no coffee shops located at the first corner (X:1, Y:1), three coffee shops on the second corner (X:2, Y:1) and no coffee shops on the third corner (X:3, Y:1). 

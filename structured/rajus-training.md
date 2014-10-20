@@ -6,7 +6,7 @@ Raju has analyzed all subjects of study that has to mastered before he becomes p
 Task
 Given a number of study subjects (N) and some constraints (M), your task is to evaluate a given study plan and assert whether it satisfies all constraints or not.
 
-Input
+## Input
 In the first line of the input, two space-separated positive integer values [N, M] will be provided (1 <= N <= 1000; 0 <= M <= 100000). The first number (N) corresponds to the number of study subjects whereas the second one represents the number of constraints characterizing these subjects.
 
 Then, M lines will follow, each one containing two space-separated positive integer values [S, U] (1 <= S <= N; 1 <= U <= N). Each of these two integers corresponds to a study subject and when both numbers are considered as a pair,they describe a constraint (for example the pair [3 4] would mean that subject 3 must be studied before subject 4).
