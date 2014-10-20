@@ -6,6 +6,7 @@ tag
 *.exe
 *.dll
 *.out
+*.pdf
 /ieeextremej/nbproject/private/
 /ieeextremej/build/
 /ieeextremej/dist/

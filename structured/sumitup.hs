@@ -2,7 +2,7 @@ rest :: Int
 rest = 1000000007
 
 siu :: [Int] -> Int -> Int
-siu as n = mod ((powm n 2) * (foldl summ 0 as)) rest
+siu as n = mod (powm n 2 * foldl summ 0 as) rest
 
 summ :: Int -> Int -> Int
 summ a b = mod (a+b) rest

@@ -62,7 +62,7 @@ Thus the correct answer would equal to = (12+6+10+14+18) % (10^9+7) = 60
 
     15
 
-# Solution
+## Solution
 
 At each sum operation, the sum of the elements of the array double. It is irrelevant what the displacement is exactly, since we are only interested in the sum.
 
@@ -70,6 +70,6 @@ As a result the total sum of the array after *Q* operations is *2^Q * S* with *S
 
 We thus first compute the sum of the initial array, modulo 10^9+7 and then multiply this with 2^Q modulo 10^9+7. The result modulo *10^9+7* is written to `stdout`. Note that one never needs to read the actual displacements.
 
-## Time complexity
+### Time complexity
 
 The algorithm runs in *N+log Q*. *N* to sum up the elements of the array and *log Q* to calculate *2^Q*.
