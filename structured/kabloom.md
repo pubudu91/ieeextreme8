@@ -51,3 +51,7 @@ Sample Output 2
 40 
 0 
 238
+
+## Solution
+
+This is a typical alignment problem. It can be solved by altering the program to calculate the Levenstein distance using dynamic programming.
