@@ -1,22 +1,38 @@
-IEEEXtreme 8
-============
+Programming contests
+====================
 
-The submissions of team *WiJeR* for the IEEEXtreme 8 24hr programming contest.
-
-Most of the code is very chaotic. We plan however to write readable code and documentation in the `structured` directory.
+The submissions and discussions of several programming contests participated in.
 
 Compiling
 ---------
 
-Based on the markdown files in the `structured` directory, one can generate a `.pdf` using `pdflatex` and `pandoc`.
+Based on the markdown files in the directory of the contests, one can generate a `.pdf` using `pdflatex` and `pandoc`.
 
-You can compile this book by running `make` in the `structured` directory.
+You can compile this book by running `make`.
 
-Team *WiJeR*
-------------
+Teams
+-----
 
-Team *WiJeR* consisted out of
+Team *Concurrent Read Write* consists out of:
+
+ - Ruben Lapauw
+ - Carl Salaets
+ - Willem Van Onsem
+
+Team *SDK(ULAK)* consists out of:
+
+ - Ingmar Dasseville
+ - Ruben Lapauw
+ - Willem Van Onsem
+
+Team *WiJeR* consists out of:
 
  - Roald Frederickx
  - Jeroen Tempels
+ - Willem Van Onsem
+
+Team *WIR* consists out of:
+
+ - Ingmar Dasseville
+ - Roald Frederickx
  - Willem Van Onsem

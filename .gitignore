@@ -1,14 +1,21 @@
+#Ignore all extensionless files
+**
+!**.*
+#All binaries and by-products
+**.exe
+**.dll
+**.out
+**.aux
+**.pdf
+**.class
+**.jar
+**.hi
+**.o
+#All temporaries
 tag
-*.swp
-*~
-*.*~*
-*.jar
-*.class
-*.exe
-*.dll
-*.out
-*.pdf
-/ieeextremej/nbproject/private/
-/ieeextremej/build/
-/ieeextremej/dist/
+**.swp
+**.bak
+**~
+**.*~*
+#And work in progress
 unsorted/**
