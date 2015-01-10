@@ -1,6 +1,9 @@
 #Ignore all extensionless files
 **
 !**.*
+!*.hs
+!*.md
+!*.tex
 #All binaries and by-products
 **.exe
 **.dll
