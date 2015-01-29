@@ -1,4 +1,10 @@
-for f in *.md
+function makePart () {
+	
+}
+
+for p in */*.md
+
+for f in */about.md
 do
 	bn=$(basename "$f" ".md")
 	echo '\newpage' >> problemset.tex
